@@ -11,6 +11,7 @@
 #include "graficos.h"
 #include "Puerta.h"
 #include "PuertaAbierta.h"
+#include "Verde.h";
 
 /* Se elige el canal de DMA que se utilizará para copiar las imágenes en memoria */
 static const int DMA_CHANNEL = 3;
@@ -31,6 +32,14 @@ void visualizarPuertaAbierta() {
                      PuertaAbiertaBitmap, // Variable que se genera automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
                      PuertaAbiertaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void Verde() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     VerdeBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     VerdeBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
 /***********************2024-2025*******************************/
