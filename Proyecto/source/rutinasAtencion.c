@@ -21,7 +21,8 @@ void RutAtencionTeclado ()
 		if (TeclaPulsada()==START)
 		{
 			ESTADO=APOSTAR;
-			
+			Verde();
+
 		}
 	}
 	if (ESTADO == PARTIDA)
@@ -29,7 +30,9 @@ void RutAtencionTeclado ()
 		if (TeclaPulsada()==SELECT)
 		{
 			ESTADO=PAUSA;
-			
+			Verde();
+			MostrarRomboGrande(1, 80, 45);
+			MostrarRomboGrande(1, 80, 115);
 		}
 	}
 }
