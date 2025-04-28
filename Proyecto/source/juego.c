@@ -53,18 +53,27 @@ void juego()
 	HabilitarIntTempo();
 	PonerEnMarchaTempo();
 	EstablecerVectorInt();
-	
+	int cartasCrupier = 0;
+	int cartasJugador = 0;
+	int contadorBaraja = 0;
+	int contadorCrupier = 0;
+	int contadorJugador
 	int seg = 0;
 	int dinero = 0; 
 	int apuesta = 0; 
-	typedef struct carta
+	typedef struct 
 	{
-		int *palo;
-		int *numero;
-	};
+		char palo[20];
+		char valor[5];
+		int valorNum;
+	}Carta;
 	
-	carta baraja [52] =	construirBaraja(baraja);
+	srand(time(NULL));
+	Carta baraja [52];
+	construirBaraja(baraja);
+	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	touchPosition pos_pantalla;
+
 	
 	mostrarInicio();
 	while(1)
@@ -87,7 +96,10 @@ void juego()
 			ESTADO = PARTIDA;
 			seg = 0; 
 			mostarPartida();
-			cartasCrupier ();
+			for (int i = 0; i < 2; i++){
+				barajaCr
+			}
+			
 			
 		} else {
 			if(pos_pantalla.px == 0 && pos_pantalla.py == 0){//boton de anadir 1 ficha
@@ -109,11 +121,37 @@ void juego()
 		}
 		//FINAL CONDICIONAL DE ESTADO APOSTAR
 	} else if (ESTADO == JUGAR){
-			if (calcularPartida()){// si se pierde la partida cambiar estado 
+		if (contadorBaraja < 4 ){
 
-			}else if(!(calcularPartida())){
-				
+		
+		for (int i = 0; i < 2; i++;){ //las dos cartas obligatorias del Jugador 
+			manoJugador[i] = robarCarta( contadorBaraja, baraja);
+			contadorBaraja++;	
+			contadorJugador++;
+			cartasJugador = cartasJugador + manoJugador[i].valorNum;
+
+		}
+		for (int i = 0; i < 2; i++; ){ //las dos cartas obligatorias del crupier
+			manoCrupier[i] = robarCarta( contadorBaraja, baraja);
+			contadorBaraja++;
+			contadorCrupier++;
+			cartasCrupier = cartasCrupier + manoCrupier[i].valorNum;
+		}
+
+		} 
+
+		if(pos_pantalla.px == 0 && pos_pantalla.py == 0 || cartasJugador => 21) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
+			if (calcularPartida(cartasJugador, cartasCrupier)){// si se pierde la partida cambiar estado 
+				ESTADO == GANAR;
+			}else if(!(calcularPartida(cartasJugador, cartasCrupier))){
+				ESTADO == FIN;
 			}
+		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){ //pulsa el boton de hit
+			manoJugador[i] =  robarCarta( contadorBaraja, baraja);
+			contadorJugador++;
+			
+		}
+			
 	}
 	
 	//DeshabilitarInterrrupciones();
