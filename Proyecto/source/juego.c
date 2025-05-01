@@ -59,7 +59,7 @@ void juego()
 	int contadorCrupier = 0;
 	int contadorJugador = 0;
 	int seg = 0;
-	int dinero = 0; 
+	int dinero = 100; 
 	int apuesta = 0; 
 	void vaciarVariables(){
 		 cartasCrupier = 0;
@@ -68,7 +68,6 @@ void juego()
 		 contadorCrupier = 0;
 		 contadorJugador = 0;
 		 seg = 0;	
-		 dinero = 0;
 		 apuesta = 0; 
 	}
 	typedef struct 
@@ -98,7 +97,8 @@ void juego()
 	mostrarInicio();
 	while(1)
 	{	
-		
+		iprintf("\x1b[11;5HDinero apostado=%d", apuesta);
+		iprintf("\x1b[10;5HDinero restante=%d", dinero);
 	if (ESTADO == INICIO){
 	 
 	
@@ -106,17 +106,18 @@ void juego()
 	
 		ESTADO = APOSTAR;
 		mostrarApuesta();
-		botonesApuesta(); 
+		borrarInicio();
 		}
 	// FINAL CONDICIONAL DE ESTADO INICIO
 	
 
 	}  else if (ESTADO == APOSTAR){
-		if ((pos_pantalla.px == 0 && pos_pantalla.py == 0) ){ // IF para cambiar de estado a PARTIDA //PROVISIONAL, PONER RANGO DE LOS BOTONES 
-			ESTADO = PARTIDA;
+		if ((pos_pantalla.px == 0 && pos_pantalla.py == 0) ){ // IF para cambiar de estado a JUGAR //PROVISIONAL, PONER RANGO DE LOS BOTONES 
+			ESTADO = JUGAR;
 			seg = 0; 
-			mostarPartida();
-		
+			borrarApostar();
+			mostrarJugar();
+			
 			
 			
 		} else {
@@ -159,30 +160,60 @@ void juego()
 		} 
 
 		if(pos_pantalla.px == 0 && pos_pantalla.py == 0 || cartasJugador => 21) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
-			
+			while (cartasCrupier <= 17){ //el crupier deja de robar si tiene 17 o mas
+					robarCartaCrupier();
+				}
 			if (calcularPartida(cartasJugador, cartasCrupier)){// si se pierde la partida cambiar estado 
-				ESTADO == GANAR;
-				robarCartaCrupier()
+				ESTADO = GANAR;
+				dinero = dinero + (2*apuesta); 
+				mostrarGanar();
+				borrarJugar();
+				
 			}else if(!(calcularPartida(cartasJugador, cartasCrupier))){
-				ESTADO == FIN;
-				robarCartaCrupier(){
+				ESTADO = FIN;
+				mostrarFin();
+				borrarJugar();
+				vaciarVariables();
 			}
 		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){ //pulsa el boton de hit
 			
-			robarCartaJugador(){
+			robarCartaJugador();
 			
 		}
 			
 	}else if (ESTADO == PAUSA){
 		if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de reanudar
-			ESTADO == JUGAR;
+			ESTADO = JUGAR;
 		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de finalizar
-			ESTADO == INICIO;
+			ESTADO = INICIO;
 			construirBaraja(baraja); //barajar cartas y reiniciar
 			shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 			vaciarVariables();
 			mostrarInicio();
 		}
+	}else if (ESTADO == FIN){
+		if (dinero <= 0){
+			mostrarPerdido();
+			dinero = 100;
+			vaciarVariables();
+			borrarFin();
+			mostrarInicio();
+		}
+		if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de volver a jugar
+			ESTADO = INICIO;
+			vaciarVariables();
+			borrarFin();
+			mostrarInicio();
+		}
+	}else if (ESTADO == GANAR){
+			mostrarVictoria();
+			vaciarVariables();
+			if (pos_pantalla.px == 0 && pos_pantalla.py == 0){
+				ESTADO = APOSTAR;
+				borrarGanar();
+				mostrarApostar();
+			}
+			
 	}
 	
 	//DeshabilitarInterrrupciones();

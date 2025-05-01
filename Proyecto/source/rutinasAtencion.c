@@ -32,7 +32,7 @@ void RutAtencionTeclado ()
 			ESTADO=PAUSA;
 			Verde();
 			MostrarRomboGrande(1, 80, 45);
-			MostrarRomboGrande(1, 80, 115);
+			MostrarRomboGrande(2, 80, 115);
 		}
 	}
 }
@@ -43,27 +43,38 @@ void RutAtencionTempo()
 	static int seg=0;
 	
 
-if (ESTADO!=ESPERA)
+if (ESTADO!=INICIO)
 {
 	tick++; 
-	if (tick==5)
-	{
+	if (tick%30 == 0){
 		seg++;
 		iprintf("\x1b[12;5HSegundos que han pasado=%d", seg);
-		tick=0;
-		if (ESTADO == ABIERTA)
-		{
-			seg3++;
-			if (seg3==3)
-			{
-				visualizarPuerta();
-				seg3=0;
-				ESTADO=CERRADA;
-				BorrarRombo(1, 5, 5);
-				BorrarRomboGrande(2, 100, 100);
-			}
-		}
+		//tick=0;		
+	}
+	if (ESTADO == JUGAR){
+		
+		if (seg ==120){
+			if(calcularPartida(cartasJugador, cartasCrupier)){
 				
+				ESTADO = GANAR;
+				mostrarGanar();
+				borrarJugar();
+			}else{
+				ESTADO = FIN;
+				mostrarFin();
+				borrarJugar();
+			}
+			seg = 0;
+			
+		}
+	}else if (ESTADO == GANAR){
+		if(seg = 10){
+			ESTADO = APOSTAR;
+			borrarGanar();
+			mostrarApostar();
+			seg = 0;
+		} 
+
 	}
 }
 	
