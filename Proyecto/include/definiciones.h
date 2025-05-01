@@ -46,7 +46,7 @@ touchPosition PANT_DAT;
 // Nombres asignados a los estados
 #define INICIO 0
 #define APOSTAR 1
-#define PARTIDA 2
+#define JUGAR 2
 #define PAUSA 3
 #define FIN 4
 #define GANAR 5
