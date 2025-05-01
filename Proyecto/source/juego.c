@@ -57,10 +57,20 @@ void juego()
 	int cartasJugador = 0;
 	int contadorBaraja = 0;
 	int contadorCrupier = 0;
-	int contadorJugador
+	int contadorJugador = 0;
 	int seg = 0;
 	int dinero = 0; 
 	int apuesta = 0; 
+	void vaciarVariables(){
+		 cartasCrupier = 0;
+		 cartasJugador = 0;
+		 contadorBaraja = 0;
+		 contadorCrupier = 0;
+		 contadorJugador = 0;
+		 seg = 0;	
+		 dinero = 0;
+		 apuesta = 0; 
+	}
 	typedef struct 
 	{
 		char palo[20];
@@ -73,7 +83,17 @@ void juego()
 	construirBaraja(baraja);
 	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	touchPosition pos_pantalla;
-
+	void robarCartaJugador(){
+		manoJugador[contadorJugador] =  robarCarta( contadorBaraja, baraja);
+			cartasJugador = cartasJugador + manoJugador[contadorJugador].valorNum; 
+			contadorJugador++;
+			
+	}
+	void robarCartaCrupier(){
+		manoCrupier[contadorCrupier] = robarCarta (contadorBaraja, baraja);
+			cartasCrupier = cartasCrupier + manoCrupier[contadorCrupier].valorNum; 
+			contadorCrupier++;
+	}
 	
 	mostrarInicio();
 	while(1)
@@ -96,9 +116,7 @@ void juego()
 			ESTADO = PARTIDA;
 			seg = 0; 
 			mostarPartida();
-			for (int i = 0; i < 2; i++){
-				barajaCr
-			}
+		
 			
 			
 		} else {
@@ -141,17 +159,30 @@ void juego()
 		} 
 
 		if(pos_pantalla.px == 0 && pos_pantalla.py == 0 || cartasJugador => 21) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
+			
 			if (calcularPartida(cartasJugador, cartasCrupier)){// si se pierde la partida cambiar estado 
 				ESTADO == GANAR;
+				robarCartaCrupier()
 			}else if(!(calcularPartida(cartasJugador, cartasCrupier))){
 				ESTADO == FIN;
+				robarCartaCrupier(){
 			}
 		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){ //pulsa el boton de hit
-			manoJugador[i] =  robarCarta( contadorBaraja, baraja);
-			contadorJugador++;
+			
+			robarCartaJugador(){
 			
 		}
 			
+	}else if (ESTADO == PAUSA){
+		if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de reanudar
+			ESTADO == JUGAR;
+		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de finalizar
+			ESTADO == INICIO;
+			construirBaraja(baraja); //barajar cartas y reiniciar
+			shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
+			vaciarVariables();
+			mostrarInicio();
+		}
 	}
 	
 	//DeshabilitarInterrrupciones();
