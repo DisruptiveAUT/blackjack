@@ -16,17 +16,25 @@ int seg3;   // Para ver si pasan tres segundos
 
 void RutAtencionTeclado ()
 {
-if (ESTADO == CERRADA)
-{	
-	if (TeclaPulsada()==A)
-	{
-		ESTADO=ABIERTA;
-		visualizarPuertaAbierta();
-		seg3=0;
-		MostrarRombo(1, 5, 5);
-		MostrarRomboGrande(2, 100, 100);
+	if (ESTADO == INICIO)
+	{	
+		if (TeclaPulsada()==START)
+		{
+			ESTADO=APOSTAR;
+			Verde();
+
+		}
 	}
-}
+	if (ESTADO == PARTIDA)
+	{	
+		if (TeclaPulsada()==SELECT)
+		{
+			ESTADO=PAUSA;
+			Verde();
+			MostrarRomboGrande(1, 80, 45);
+			MostrarRomboGrande(1, 80, 115);
+		}
+	}
 }
 
 void RutAtencionTempo()
