@@ -17,6 +17,7 @@ y en otro ejemplo de Jaeden Ameronen
 #include "perifericos.h"
 #include "rutinasAtencion.h"
 #include "fondos.h"
+#include "sprites.h"
 
 int tiempo;
 
@@ -53,11 +54,11 @@ void juego()
 	HabilitarIntTempo();
 	PonerEnMarchaTempo();
 	EstablecerVectorInt();
-	int cartasCrupier = 0;
-	int cartasJugador = 0;
-	int contadorBaraja = 0;
-	int contadorCrupier = 0;
-	int contadorJugador = 0;
+	int cartasCrupier = 0; //valor numerico de la mano en total
+	int cartasJugador = 0; //valor numerico de la mano en total
+	int contadorBaraja = 0; //cantidad de cartas robadas
+	int contadorCrupier = 0; //cantidad de cartas robadas (apunta siempre al siguiente)
+	int contadorJugador = 0; //cantidad de cartas robadas (apunta siempre al siguiente)
 	int seg = 0;
 	int dinero = 100; 
 	int apuesta = 0; 
@@ -85,12 +86,19 @@ void juego()
 	void robarCartaJugador(){
 		manoJugador[contadorJugador] =  robarCarta( contadorBaraja, baraja);
 			cartasJugador = cartasJugador + manoJugador[contadorJugador].valorNum; 
+			if (cartasJugador > 21 && manoJugador[contadorJugador].valorNum == 11){
+				cartasJugador = cartasJugador - 10; 
+			}
 			contadorJugador++;
+			
 			
 	}
 	void robarCartaCrupier(){
 		manoCrupier[contadorCrupier] = robarCarta (contadorBaraja, baraja);
 			cartasCrupier = cartasCrupier + manoCrupier[contadorCrupier].valorNum; 
+			if (cartasCrupier > 21 && manoCrupier[contadorCrupier].valorNum == 11){
+				cartasCrupier = cartasCrupier - 10; 
+			}
 			contadorCrupier++;
 	}
 	
@@ -102,7 +110,8 @@ void juego()
 	if (ESTADO == INICIO){
 	 
 	
-		if (TeclaPulsada() == START || (pos_pantalla.px == 0 && pos_pantalla.py == 0) ){ //PROVISIONAL, PONER RANGO DE LOS BOTONES 
+		if (TeclaPulsada() == START || (pos_pantalla.px >= 29 && pos_pantalla.px <= 229 &&
+			pos_pantalla.py >= 46 && pos_pantalla.py <= 101)){ //si se pulsa START o se le da al boton central
 	
 		ESTADO = APOSTAR;
 		mostrarApuesta();
@@ -112,7 +121,7 @@ void juego()
 	
 
 	}  else if (ESTADO == APOSTAR){
-		if ((pos_pantalla.px == 0 && pos_pantalla.py == 0) ){ // IF para cambiar de estado a JUGAR //PROVISIONAL, PONER RANGO DE LOS BOTONES 
+		/*if ((pos_pantalla.px == 0 && pos_pantalla.py == 0) ){ // IF para cambiar de estado a JUGAR //PROVISIONAL, PONER RANGO DE LOS BOTONES 
 			ESTADO = JUGAR;
 			seg = 0; 
 			borrarApostar();
@@ -120,24 +129,31 @@ void juego()
 			
 			
 			
-		} else {
-			if(pos_pantalla.px == 0 && pos_pantalla.py == 0){//boton de anadir 1 ficha
+			
+		} */
+			
+			if((pos_pantalla.px >= 15 && pos_pantalla.px <= 47 &&
+				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 1){//boton de anadir 1 ficha
 				apuesta = apuesta + 1;
 				dinero = dinero - 1;
-			} else if(pos_pantalla.px == 0 && pos_pantalla.py == 0){//boton de anadir 10 fichas
+			} else if((pos_pantalla.px >= 62 && pos_pantalla.px <= 94 &&
+				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 10){//boton de anadir 10 fichas
 				apuesta = apuesta + 10;
 				dinero = dinero - 10;
-			} else if(pos_pantalla.px == 0 && pos_pantalla.py == 0){//boton de anadir 20 fichas
+			} else if((pos_pantalla.px >= 109 && pos_pantalla.px <= 141 &&
+				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 20){//boton de anadir 20 fichas
 				apuesta = apuesta + 20;
 				dinero = dinero - 20;
-			} else if(pos_pantalla.px == 0 && pos_pantalla.py == 0){//boton de anadir 50 fichas
+			} else if((pos_pantalla.px >= 156 && pos_pantalla.px <= 188 &&
+				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 50){//boton de anadir 50 fichas
 				apuesta = apuesta + 50;
 				dinero = dinero - 50;
-			} else if(pos_pantalla.px == 0 && pos_pantalla.py == 0){//boton de all in
+			} else if((pos_pantalla.px >= 203 && pos_pantalla.px <= 235 &&
+				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero <> 0){//boton de all in
 				apuesta = apuesta + dinero;
 				dinero = 0;
 			} 
-		}
+		
 		//FINAL CONDICIONAL DE ESTADO APOSTAR
 	} else if (ESTADO == JUGAR){
 		if (contadorBaraja < 4 ){
@@ -147,19 +163,37 @@ void juego()
 			manoJugador[i] = robarCarta( contadorBaraja, baraja);
 			contadorBaraja++;	
 			contadorJugador++;
-			cartasJugador = cartasJugador + manoJugador[i].valorNum;
+			if (manoJugador[i].valorNum == 11){// si es un as
+				if (cartasJugador + manoJugador[i].valorNum > 21 ){ //el as cuenta como 11 o 1 segun convenga
+					cartasJugador = cartasJugador + 1;
+				}else {
+					cartasJugador = cartasJugador + 11;
+				}
+			}else {
+				cartasJugador = cartasJugador + manoJugador[i].valorNum;
+			}
+			
 
 		}
 		for (int i = 0; i < 2; i++; ){ //las dos cartas obligatorias del crupier
 			manoCrupier[i] = robarCarta( contadorBaraja, baraja);
 			contadorBaraja++;
 			contadorCrupier++;
-			cartasCrupier = cartasCrupier + manoCrupier[i].valorNum;
+			if (manoCrupier[i].valorNum == 11){
+				if (cartasCrupier + manoCrupier[i].valorNum > 21 ){ //el as cuenta como 11 o 1 segun convenga
+					cartasCrupier = cartasCrupier + 1;
+				}else {
+					cartasCrupier = cartasCrupier + 11;
+				}
+			}else {
+				cartasCrupier = cartasCrupier + manoCrupier[i].valorNum;
+			}
 		}
 
 		} 
 
-		if(pos_pantalla.px == 0 && pos_pantalla.py == 0 || cartasJugador => 21) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
+		if( (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
+			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) || cartasJugador => 21) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
 			while (cartasCrupier <= 17){ //el crupier deja de robar si tiene 17 o mas
 					robarCartaCrupier();
 				}
@@ -175,16 +209,19 @@ void juego()
 				borrarJugar();
 				vaciarVariables();
 			}
-		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){ //pulsa el boton de hit
+		}else if (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
+			pos_pantalla.py >= 64 && pos_pantalla.py < 96 ) { //pulsa el boton de hit
 			
 			robarCartaJugador();
 			
 		}
 			
 	}else if (ESTADO == PAUSA){
-		if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de reanudar
+		if (pos_pantalla.px >= 46 && pos_pantalla.px <= 78 &&
+			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de reanudar
 			ESTADO = JUGAR;
-		}else if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de finalizar
+		}else if (pos_pantalla.px >= 175 && pos_pantalla.px <= 207 &&
+			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de finalizar
 			ESTADO = INICIO;
 			construirBaraja(baraja); //barajar cartas y reiniciar
 			shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
@@ -199,7 +236,8 @@ void juego()
 			borrarFin();
 			mostrarInicio();
 		}
-		if (pos_pantalla.px == 0 && pos_pantalla.py == 0){// si se pulsa el boton de volver a jugar
+		if (pos_pantalla.px >= 29 && pos_pantalla.px <= 229 &&
+			pos_pantalla.py >= 46 && pos_pantalla.py <= 101){// si se pulsa el boton de volver a jugar
 			ESTADO = INICIO;
 			vaciarVariables();
 			borrarFin();
@@ -208,7 +246,8 @@ void juego()
 	}else if (ESTADO == GANAR){
 			mostrarVictoria();
 			vaciarVariables();
-			if (pos_pantalla.px == 0 && pos_pantalla.py == 0){
+			if (pos_pantalla.px >= 29 && pos_pantalla.px <= 229 &&
+				pos_pantalla.py >= 46 && pos_pantalla.py <= 101){ //boton de volver
 				ESTADO = APOSTAR;
 				borrarGanar();
 				mostrarApostar();
