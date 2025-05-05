@@ -4,8 +4,6 @@
 fondos.h
 -------------------------------------*/
 
-extern void visualizarPuerta();
-extern void visualizarPuertaAbierta();
 extern void Verde();
 
 /***********************2024-2025*******************************/
