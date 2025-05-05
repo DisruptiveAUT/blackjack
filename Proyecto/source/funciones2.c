@@ -4,7 +4,13 @@
 #include "perifericos.h"
 #include "fondos.h"
 #include "sprites.h"
-bool calcular partida(int valorJugador, int valorCrupier);
+
+typedef struct 
+{
+    char palo[20];
+    char valor[5];
+    int valorNum;
+}Carta;
 
 
 Carta robarCarta(int cont, Carta x[]){
@@ -12,7 +18,7 @@ Carta robarCarta(int cont, Carta x[]){
     return x[cont];
 }
 
-bool calcular partida(int valorJugador, int valorCrupier){
+bool calcularPartida(int valorJugador, int valorCrupier){
     
     if(valorJugador > 21){
         if (valorCrupier > 21){
