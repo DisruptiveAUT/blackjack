@@ -21,12 +21,11 @@ void shuffle(Carta mazo[], int n) {
 void construirBaraja(Carta baraja[]) {
     // Array de valores
     const char *valores[] = { // Array de valores
-        "2", "3", "4", "5", "6", "7", "8", "9", "10",
-        "J", "Q", "K", "A"
+        "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
     };
 
     const char *palos[] = { //Array de palos
-        "Corazones", "Diamantes", "Tréboles", "Picas"
+        "Corazones", "Diamantes", "Treboles", "Picas"
     };
 
     int k = 0;

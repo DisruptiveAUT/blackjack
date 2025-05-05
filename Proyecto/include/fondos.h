@@ -2,9 +2,15 @@
 
 /*-------------------------------------
 fondos.h
+
+
 -------------------------------------*/
 
-extern void Verde();
+extern void diseno();
+extern void partidaPerdida();
+extern void portada();
+extern void seleccionarApuesta();
+
 
 /***********************2024-2025*******************************/
 
