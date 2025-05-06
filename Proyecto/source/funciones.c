@@ -45,4 +45,32 @@ void construirBaraja(Carta baraja[]) {
             k++;
         }
     }
+
+    
 }
+ //de aqui en adelante está en obras todavía
+void mostrarInicio(){
+    portada();
+}
+
+void mostrarApostar(){
+    seleccionarApuesta();
+    
+}
+
+void mostrarPausa(){
+    menuPausa();
+    Borrar2picas(indice, x, y);
+    Borrar2corazones(int indice, int x, int y);
+    
+}
+
+void mostrarJugar(){
+    diseno();
+
+}
+
+void mostrarPartidaPerdida(){
+    partidaPerdida();
+}
+
