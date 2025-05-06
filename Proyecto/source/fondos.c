@@ -13,6 +13,8 @@
 #include "partidaPerdida.h"
 #include "portada.h"
 #include "seleccionarApuesta.h"
+#include "menuPausa.h"
+
 
 
 /* Se elige el canal de DMA que se utilizará para copiar las imágenes en memoria */
@@ -51,6 +53,22 @@ void seleccionarApuesta() {
                     seleccionarApuestaBitmap, // Variable que se genera automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
                      seleccionarApuestaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void menuPausa() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                    menuPausaBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     MenuPausaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void victoria() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                    victoriaBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     victoriaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
 /***********************2024-2025*******************************/

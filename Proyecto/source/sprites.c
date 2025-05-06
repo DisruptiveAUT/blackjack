@@ -2494,4 +2494,43 @@ oamUpdate(&oamMain);
 
 /***********************2024-2025*******************************/
 
-
+void mostrarCartaCrupier(Carta x, int manoCrupier){
+	switch(manoCrupier) {
+        case 1:
+            detectarPalo(x, 28, 10);
+            break;
+        case 2:
+            detectarPalo(x, 70, 10)
+            break;
+        case 3:
+            detectarPalo(x, 112, 10)
+            break;
+		case 4:
+			detectarPalo(x, 154, 10)
+			break;
+		case 5:
+			detectarPalo(x, 196, 10)
+        default:
+            break;
+    }
+}
+void mostrarCartaJugador(Carta x, int manoJugador){
+	switch(manoJugador) {
+        case 1:
+            detectarPalo(x, 28, 134);
+            break;
+        case 2:
+            detectarPalo(x, 70, 134)
+            break;
+        case 3:
+            detectarPalo(x, 112, 134)
+            break;
+		case 4:
+			detectarPalo(x, 154, 134)
+			break;
+		case 5:
+			detectarPalo(x, 196, 134)
+        default:
+            break;
+    }
+}

@@ -50,12 +50,6 @@ void juego()
 		 apuesta = 0; 
 		 crupierMostradas = false;
 	}
-	typedef struct 
-	{
-		char palo[20];
-		char valor[5];
-		int valorNum;
-	}Carta;
 	
 	srand(time(NULL));
 	Carta baraja [52];

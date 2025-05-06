@@ -53,5 +53,11 @@ touchPosition PANT_DAT;
 
 extern int ESTADO;
 
+typedef struct {
+    char palo[20];
+    char valor[5];
+    int valorNum;
+} Carta;
+
 /***********************2024-2025*******************************/
 

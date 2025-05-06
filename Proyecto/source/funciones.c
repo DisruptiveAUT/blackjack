@@ -2,12 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-
-typedef struct {
-    char palo[20];
-    char valor[5];
-    int valorNum;
-} Carta;
+#include "definiciones.h"
 
 void shuffle(Carta mazo[], int n) {
     for (int i = n - 1; i > 0; i--) {
@@ -45,4 +40,32 @@ void construirBaraja(Carta baraja[]) {
             k++;
         }
     }
+
+    
 }
+ //de aqui en adelante está en obras todavía
+void mostrarInicio(){
+    portada();
+}
+
+void mostrarApostar(){
+    seleccionarApuesta();
+    
+}
+
+void mostrarPausa(){
+    menuPausa();
+    Borrar2picas(indice, x, y);
+    Borrar2corazones(int indice, int x, int y);
+    
+}
+
+void mostrarJugar(){
+    diseno();
+
+}
+
+void mostrarPartidaPerdida(){
+    partidaPerdida();
+}
+
