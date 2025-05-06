@@ -2,12 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-
-typedef struct {
-    char palo[20];
-    char valor[5];
-    int valorNum;
-} Carta;
+#include "definiciones.h"
 
 void shuffle(Carta mazo[], int n) {
     for (int i = n - 1; i > 0; i--) {

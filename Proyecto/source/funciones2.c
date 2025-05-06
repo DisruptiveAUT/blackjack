@@ -5,13 +5,6 @@
 #include "fondos.h"
 #include "sprites.h"
 
-typedef struct 
-{
-    char palo[20];
-    char valor[5];
-    int valorNum;
-}Carta;
-
 
 Carta robarCarta(int cont, Carta x[]){
     cont ++;
