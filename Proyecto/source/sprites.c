@@ -2494,4 +2494,7 @@ oamUpdate(&oamMain);
 
 /***********************2024-2025*******************************/
 
-
+void mostrarCartaCrupier(CARTA x, int manoNum){
+	
+}
+void mostrarCartaJugador(CARTA x, int manoNum);
