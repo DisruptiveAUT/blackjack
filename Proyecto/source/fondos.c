@@ -9,9 +9,11 @@
 
 #include "fondos.h"
 #include "graficos.h"
-#include "Puerta.h"
-#include "PuertaAbierta.h"
-#include "Verde.h"
+#include "diseno.h"
+#include "partidaPerdida.h"
+#include "portada.h"
+#include "seleccionarApuesta.h"
+
 
 /* Se elige el canal de DMA que se utilizará para copiar las imágenes en memoria */
 static const int DMA_CHANNEL = 3;
@@ -19,12 +21,36 @@ static const int DMA_CHANNEL = 3;
 /* Para cada fondo que se quiera visualizar hay que escribir un procedimiento como el siguiente */
 
 
-void Verde() {
+void diseno() {
 		
     dmaCopyHalfWords(DMA_CHANNEL,
-                     VerdeBitmap, // Variable que se genera automáticamente
+                     disenoBitmap, // Variable que se genera automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
-                     VerdeBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+                     disenoBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void partidaPerdida() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     partidaPerdidaBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     partidaPerdidoBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void portada() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                     portadaBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     portadaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void seleccionarApuesta() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                    seleccionarApuestaBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     seleccionarApuestaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
 /***********************2024-2025*******************************/

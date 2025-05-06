@@ -16,7 +16,7 @@ int seg3;   // Para ver si pasan tres segundos
 
 void RutAtencionTeclado ()
 {
-	if (ESTADO == INICIO)
+	/*if (ESTADO == INICIO)
 	{	
 		if (TeclaPulsada()==START)
 		{
@@ -34,6 +34,25 @@ void RutAtencionTeclado ()
 			MostrarRomboGrande(1, 80, 45);
 			MostrarRomboGrande(2, 80, 115);
 		}
+	}*/
+	if (ESTADO == APOSTAR && TeclaPulsada() == START){
+		ESTADO = JUGAR;
+		borrarApostar();
+		mostrarJugar();
+
+	}
+	if (TeclaPulsada() == SELECT){
+		ESTADO = PAUSA;
+		if (ESTADO == APOSTAR){
+			borrarApostar();
+		}else if (ESTADO == JUGAR ){
+			borrarJugar();
+		} else if (ESTADO == GANAR ){
+			borrarGanar();
+		} else if (ESTADO == FIN ){
+			borrarFin();
+		}
+		mostrarPausa();
 	}
 }
 
