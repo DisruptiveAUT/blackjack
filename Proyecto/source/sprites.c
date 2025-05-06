@@ -11,6 +11,7 @@ Código desarrollado basado en el ejemplo "Simple sprite demo" de dovoto y en ot
 
 #include "sprites.h"
 #include "definiciones.h"
+#include "cartas_funciones.h"
 
 u16* gfxrombo;
 u16* gfxromboGrande;
@@ -2494,22 +2495,54 @@ oamUpdate(&oamMain);
 
 /***********************2024-2025*******************************/
 
+
+
+FuncionCarta funcionesMostrar[52] = {
+    MostrarKcorazones1, MostrarKcorazones2, MostrarKcorazones3, MostrarKcorazones4,
+    MostrarKcorazones5, MostrarKcorazones6, MostrarKcorazones7, MostrarKcorazones8,
+    MostrarKcorazones9, MostrarKcorazones10, MostrarKcorazones11, MostrarKcorazones12, MostrarKcorazones13,
+    MostrarKdiamantes1, MostrarKdiamantes2, MostrarKdiamantes3, MostrarKdiamantes4,
+    MostrarKdiamantes5, MostrarKdiamantes6, MostrarKdiamantes7, MostrarKdiamantes8,
+    MostrarKdiamantes9, MostrarKdiamantes10, MostrarKdiamantes11, MostrarKdiamantes12, MostrarKdiamantes13,
+    MostrarKpicas1, MostrarKpicas2, MostrarKpicas3, MostrarKpicas4,
+    MostrarKpicas5, MostrarKpicas6, MostrarKpicas7, MostrarKpicas8,
+    MostrarKpicas9, MostrarKpicas10, MostrarKpicas11, MostrarKpicas12, MostrarKpicas13,
+    MostrarKtreboles1, MostrarKtreboles2, MostrarKtreboles3, MostrarKtreboles4,
+    MostrarKtreboles5, MostrarKtreboles6, MostrarKtreboles7, MostrarKtreboles8,
+    MostrarKtreboles9, MostrarKtreboles10, MostrarKtreboles11, MostrarKtreboles12, MostrarKtreboles13
+};
+
+FuncionCarta funcionesBorrar[52] = {
+    BorrarKcorazones1, BorrarKcorazones2, BorrarKcorazones3, BorrarKcorazones4,
+    BorrarKcorazones5, BorrarKcorazones6, BorrarKcorazones7, BorrarKcorazones8,
+    BorrarKcorazones9, BorrarKcorazones10, BorrarKcorazones11, BorrarKcorazones12, BorrarKcorazones13,
+    BorrarKdiamantes1, BorrarKdiamantes2, BorrarKdiamantes3, BorrarKdiamantes4,
+    BorrarKdiamantes5, BorrarKdiamantes6, BorrarKdiamantes7, BorrarKdiamantes8,
+    BorrarKdiamantes9, BorrarKdiamantes10, BorrarKdiamantes11, BorrarKdiamantes12, BorrarKdiamantes13,
+    BorrarKpicas1, BorrarKpicas2, BorrarKpicas3, BorrarKpicas4,
+    BorrarKpicas5, BorrarKpicas6, BorrarKpicas7, BorrarKpicas8,
+    BorrarKpicas9, BorrarKpicas10, BorrarKpicas11, BorrarKpicas12, BorrarKpicas13,
+    BorrarKtreboles1, BorrarKtreboles2, BorrarKtreboles3, BorrarKtreboles4,
+    BorrarKtreboles5, BorrarKtreboles6, BorrarKtreboles7, BorrarKtreboles8,
+    BorrarKtreboles9, BorrarKtreboles10, BorrarKtreboles11, BorrarKtreboles12, BorrarKtreboles13
+};
+
 void mostrarCartaCrupier(Carta x, int manoCrupier){
 	switch(manoCrupier) {
         case 1:
-            detectarPalo(x, 28, 10);
+            mostrarCarta(x, 28, 10);
             break;
         case 2:
-            detectarPalo(x, 70, 10)
+            mostrarCarta(x, 70, 10)
             break;
         case 3:
-            detectarPalo(x, 112, 10)
+            mostrarCarta(x, 112, 10)
             break;
 		case 4:
-			detectarPalo(x, 154, 10)
+			mostrarCarta(x, 154, 10)
 			break;
 		case 5:
-			detectarPalo(x, 196, 10)
+			mostrarCarta(x, 196, 10)
         default:
             break;
     }
@@ -2517,20 +2550,29 @@ void mostrarCartaCrupier(Carta x, int manoCrupier){
 void mostrarCartaJugador(Carta x, int manoJugador){
 	switch(manoJugador) {
         case 1:
-            detectarPalo(x, 28, 134);
+			mostrarCarta(x, 28, 134);
             break;
         case 2:
-            detectarPalo(x, 70, 134)
+			mostrarCarta(x, 70, 134)
             break;
         case 3:
-            detectarPalo(x, 112, 134)
+			mostrarCarta(x, 112, 134)
             break;
 		case 4:
-			detectarPalo(x, 154, 134)
+			mostrarCarta(x, 154, 134)
 			break;
 		case 5:
-			detectarPalo(x, 196, 134)
+			mostrarCarta(x, 196, 134)
         default:
             break;
     }
 }
+
+void mostrarCarta(Carta c, int x, int y) {
+    funcionesMostrar[c.id](c.id, x, y);
+}
+
+void borrarCarta(Carta c, int x, int y) {
+    funcionesBorrar[c.id](c.id, x, y);
+}
+

@@ -15,21 +15,23 @@ void shuffle(Carta mazo[], int n) {
 
 void construirBaraja(Carta baraja[]) {
     // Array de valores
-    const char *valores[] = { // Array de valores
+    const char *valores[] = {
         "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
     };
 
-    const char *palos[] = { //Array de palos
+    const char *palos[] = {
         "Corazones", "Diamantes", "Treboles", "Picas"
     };
 
     int k = 0;
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 13; j++) {
-            strcpy(baraja[k].valor, valores[j]); //Asignar valores
-            strcpy(baraja[k].palo, palos[i]); //Asignar palo
-            
-            //Asignar valor numerico
+    for (int i = 0; i < 4; i++) {         // Palos
+        for (int j = 0; j < 13; j++) {    // Valores
+            baraja[k].id = k; // ID único de 0 a 51
+
+            strcpy(baraja[k].valor, valores[j]);
+            strcpy(baraja[k].palo, palos[i]);
+
+            // Asignar valorNum
             if (j < 9) { // "2" a "10"
                 baraja[k].valorNum = j + 2;
             } else if (j < 12) { // "J", "Q", "K"
@@ -37,35 +39,8 @@ void construirBaraja(Carta baraja[]) {
             } else { // "A"
                 baraja[k].valorNum = 11;
             }
+
             k++;
         }
     }
-
-    
 }
- //de aqui en adelante está en obras todavía
-void mostrarInicio(){
-    portada();
-}
-
-void mostrarApostar(){
-    seleccionarApuesta();
-    
-}
-
-void mostrarPausa(){
-    menuPausa();
-    Borrar2picas(indice, x, y);
-    Borrar2corazones(int indice, int x, int y);
-    
-}
-
-void mostrarJugar(){
-    diseno();
-
-}
-
-void mostrarPartidaPerdida(){
-    partidaPerdida();
-}
-
