@@ -16,25 +16,7 @@ int seg3;   // Para ver si pasan tres segundos
 
 void RutAtencionTeclado ()
 {
-	/*if (ESTADO == INICIO)
-	{	
-		if (TeclaPulsada()==START)
-		{
-			ESTADO=APOSTAR;
-			Verde();
 
-		}
-	}
-	if (ESTADO == PARTIDA)
-	{	
-		if (TeclaPulsada()==SELECT)
-		{
-			ESTADO=PAUSA;
-			Verde();
-			MostrarRomboGrande(1, 80, 45);
-			MostrarRomboGrande(2, 80, 115);
-		}
-	}*/
 	if (ESTADO == APOSTAR && TeclaPulsada() == START){
 		ESTADO = JUGAR;
 		borrarApostar();
@@ -101,7 +83,7 @@ if (ESTADO!=INICIO)
 
 void EstablecerVectorInt()
 {
-// A COMPLETAR
+
 	 irqSet(IRQ_TIMER0, RutAtencionTempo);
 	 irqSet(IRQ_KEYS, RutAtencionTeclado);
 	

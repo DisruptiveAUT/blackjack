@@ -83,7 +83,7 @@ void juego()
 	if (ESTADO == INICIO){
 	 
 	
-		if (TeclaPulsada() == START || (pos_pantalla.px >= 29 && pos_pantalla.px <= 229 &&
+		if ((pos_pantalla.px >= 29 && pos_pantalla.px <= 229 &&
 			pos_pantalla.py >= 46 && pos_pantalla.py <= 101)){ //si se pulsa START o se le da al boton central
 	
 		ESTADO = APOSTAR;
@@ -216,10 +216,11 @@ void juego()
 			vaciarVariables();
 			borrarFin();
 			mostrarInicio();
+			
 		}
-		if (pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
-			pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla
-			ESTADO = INICIO;
+		if (TeclaPulsada() == A || pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
+			pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla o pulsar a
+			ESTADO = APOSTAR;
 			vaciarVariables();
 			borrarFin();
 			mostrarInicio();
@@ -228,7 +229,7 @@ void juego()
 			mostrarVictoria();
 			vaciarVariables();
 			if (pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
-				pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla
+				pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla o pulsar a
 				ESTADO = APOSTAR;
 				borrarGanar();
 				mostrarApostar();
