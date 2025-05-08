@@ -2533,16 +2533,16 @@ void mostrarCartaCrupier(Carta x, int manoCrupier){
             mostrarCarta(x, 28, 10);
             break;
         case 2:
-            mostrarCarta(x, 70, 10)
+            mostrarCarta(x, 70, 10);
             break;
         case 3:
-            mostrarCarta(x, 112, 10)
+            mostrarCarta(x, 112, 10);
             break;
 		case 4:
-			mostrarCarta(x, 154, 10)
+			mostrarCarta(x, 154, 10);
 			break;
 		case 5:
-			mostrarCarta(x, 196, 10)
+			mostrarCarta(x, 196, 10);
         default:
             break;
     }
@@ -2553,16 +2553,16 @@ void mostrarCartaJugador(Carta x, int manoJugador){
 			mostrarCarta(x, 28, 134);
             break;
         case 2:
-			mostrarCarta(x, 70, 134)
+			mostrarCarta(x, 70, 134);
             break;
         case 3:
-			mostrarCarta(x, 112, 134)
+			mostrarCarta(x, 112, 134);
             break;
 		case 4:
-			mostrarCarta(x, 154, 134)
+			mostrarCarta(x, 154, 134);
 			break;
 		case 5:
-			mostrarCarta(x, 196, 134)
+			mostrarCarta(x, 196, 134);
         default:
             break;
     }
@@ -2576,3 +2576,54 @@ void borrarCarta(Carta c, int x, int y) {
     funcionesBorrar[c.id](c.id, x, y);
 }
 
+void borrarCartaCrupier(Carta cartas[]){
+	for (int i = 0; i < 10; i++) {
+        if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
+            break;
+        }
+		switch(i) {
+			case 0:
+				borrarCarta(cartas[i], 28, 10);
+				break;
+			case 1:
+				borrarCarta(cartas[i], 70, 10);
+				break;
+			case 2:
+				borrarCarta(cartas[i], 112, 10);
+				break;
+			case 3:
+				borrarCarta(cartas[i], 154, 10);
+				break;
+			case 4:
+				borrarCarta(cartas[i], 196, 10);
+			default:
+				break;
+		}
+    }
+}
+
+void borrarCartaJugador(Carta cartas[]){
+	for (int i = 0; i < 10; i++) {
+        if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
+            break;
+        }
+		switch(i) {
+			case 0:
+				borrarCarta(cartas[i], 28, 134);
+				break;
+			case 1:
+				borrarCarta(cartas[i], 70, 134);
+				break;
+			case 2:
+				borrarCarta(cartas[i], 112, 134);
+				break;
+			case 3:
+				borrarCarta(cartas[i], 154, 134);
+				break;
+			case 4:
+				borrarCarta(cartas[i], 196, 134);
+			default:
+				break;
+		}
+    }
+}
