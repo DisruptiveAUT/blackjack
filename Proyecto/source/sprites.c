@@ -2576,3 +2576,54 @@ void borrarCarta(Carta c, int x, int y) {
     funcionesBorrar[c.id](c.id, x, y);
 }
 
+void borrarCartaCrupier(Carta cartas[]){
+	for (int i = 0; i < 10; i++) {
+        if (mazo[i].id == 0 && mazo[i].palo[0] == '\0') {
+            break;
+        }
+		switch(i) {
+			case 1:
+				borrarCarta(cartas[i], 28, 10);
+				break;
+			case 2:
+				borrarCarta(cartas[i], 70, 10)
+				break;
+			case 3:
+				borrarCarta(cartas[i], 112, 10)
+				break;
+			case 4:
+				borrarCarta(cartas[i], 154, 10)
+				break;
+			case 5:
+				borrarCarta(cartas[i], 196, 10)
+			default:
+				break;
+		}
+    }
+}
+
+void borrarCartaJugador(Carta cartas[]){
+	for (int i = 0; i < 10; i++) {
+        if (mazo[i].id == 0 && mazo[i].palo[0] == '\0') {
+            break;
+        }
+		switch(i) {
+			case 1:
+				borrarCarta(cartas[i], 28, 134);
+				break;
+			case 2:
+				borrarCarta(cartas[i], 70, 134)
+				break;
+			case 3:
+				borrarCarta(cartas[i], 112, 134)
+				break;
+			case 4:
+				borrarCarta(cartas[i], 154, 134)
+				break;
+			case 5:
+				borrarCarta(cartas[i], 196, 134)
+			default:
+				break;
+		}
+    }
+}
