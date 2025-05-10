@@ -53,6 +53,8 @@ void juego()
 		 crupierMostradas = false;
 		 manoJugador = manoJugadorLimpio;
 		 manoCrupier = manoCrupierLimpio;
+		 construirBaraja(baraja);
+		 shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	}
 	
 	srand(time(NULL));
@@ -171,11 +173,11 @@ void juego()
 			if (calcularPartida(cartasJugador, cartasCrupier)){// si se pierde la partida cambiar estado 
 				ESTADO = GANAR;
 				dinero = dinero + (2*apuesta); 
-				victoria()
+				victoria();
 			}else if(!(calcularPartida(cartasJugador, cartasCrupier))){
 				ESTADO = FIN;
-				partidaPerdida()
-				vaciarVariables()
+				partidaPerdida();
+				vaciarVariables();
 			}
 		}else if (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
 			pos_pantalla.py >= 64 && pos_pantalla.py < 96 ) { //pulsa el boton de hit
@@ -189,7 +191,7 @@ void juego()
 		if (pos_pantalla.px >= 46 && pos_pantalla.px <= 78 &&
 			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de reanudar
 			ESTADO = JUGAR;
-			diseno()
+			diseno();
 			for (int i = 0; i < contadorJugador - 1; i++){
 				ponerCartaJugador(manoJugador[i], i);
 			}
@@ -203,8 +205,8 @@ void juego()
 			ESTADO = INICIO;
 			construirBaraja(baraja); //barajar cartas y reiniciar
 			shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
-			vaciarVariables()
-			portada()
+			vaciarVariables();
+			portada();
 		}
 	}else if (ESTADO == FIN){
 		if (dinero <= 0){
@@ -220,15 +222,15 @@ void juego()
 			pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla o pulsar a
 			ESTADO = APOSTAR;
 			vaciarVariables();
-			portada()
+			portada();
 		}
 	}else if (ESTADO == GANAR){
-			victoria()
-			vaciarVariables()
+			victoria();
+			vaciarVariables();
 			if (pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
 				pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla o pulsar a
 				ESTADO = APOSTAR;
-				seleccionarApuesta()
+				seleccionarApuesta();
 			}
 			
 	}
