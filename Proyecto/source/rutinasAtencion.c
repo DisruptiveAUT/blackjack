@@ -10,6 +10,8 @@ rutinasAtencion.c
 #include "perifericos.h"
 #include "fondos.h"
 #include "sprites.h"
+#include "funciones2.h"
+
 
 int ESTADO; // Para controlar el estado del autómata en que esté
 int seg3;   // Para ver si pasan tres segundos
@@ -19,22 +21,12 @@ void RutAtencionTeclado ()
 
 	if (ESTADO == APOSTAR && TeclaPulsada() == START){
 		ESTADO = JUGAR;
-		borrarApostar();
-		mostrarJugar();
+		diseno();
 
 	}
 	if (TeclaPulsada() == SELECT){
 		ESTADO = PAUSA;
-		if (ESTADO == APOSTAR){
-			borrarApostar();
-		}else if (ESTADO == JUGAR ){
-			borrarJugar();
-		} else if (ESTADO == GANAR ){
-			borrarGanar();
-		} else if (ESTADO == FIN ){
-			borrarFin();
-		}
-		mostrarPausa();
+		menuPausa();
 	}
 }
 
@@ -56,14 +48,11 @@ if (ESTADO!=INICIO)
 		
 		if (seg ==120){
 			if(calcularPartida(cartasJugador, cartasCrupier)){
-				
 				ESTADO = GANAR;
-				mostrarGanar();
-				borrarJugar();
+				victoria();
 			}else{
 				ESTADO = FIN;
-				mostrarFin();
-				borrarJugar();
+				partidaPerdida();
 			}
 			seg = 0;
 			
@@ -71,14 +60,11 @@ if (ESTADO!=INICIO)
 	}else if (ESTADO == GANAR){
 		if(seg = 10){
 			ESTADO = APOSTAR;
-			borrarGanar();
-			mostrarApostar();
+			seleccionarApuesta();
 			seg = 0;
-		} 
-
+		}
 	}
 }
-	
 }
 
 void EstablecerVectorInt()
