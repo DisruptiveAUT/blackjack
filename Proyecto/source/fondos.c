@@ -36,7 +36,7 @@ void partidaPerdida() {
     dmaCopyHalfWords(DMA_CHANNEL,
                      partidaPerdidaBitmap, // Variable que se genera automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
-                     partidaPerdidoBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+                     partidaPerdidaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
 void portada() {
