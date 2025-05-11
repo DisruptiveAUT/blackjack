@@ -2498,34 +2498,50 @@ oamUpdate(&oamMain);
 
 
 FuncionCarta funcionesMostrar[52] = {
-    MostrarKcorazones1, MostrarKcorazones2, MostrarKcorazones3, MostrarKcorazones4,
-    MostrarKcorazones5, MostrarKcorazones6, MostrarKcorazones7, MostrarKcorazones8,
-    MostrarKcorazones9, MostrarKcorazones10, MostrarKcorazones11, MostrarKcorazones12, MostrarKcorazones13,
-    MostrarKdiamantes1, MostrarKdiamantes2, MostrarKdiamantes3, MostrarKdiamantes4,
-    MostrarKdiamantes5, MostrarKdiamantes6, MostrarKdiamantes7, MostrarKdiamantes8,
-    MostrarKdiamantes9, MostrarKdiamantes10, MostrarKdiamantes11, MostrarKdiamantes12, MostrarKdiamantes13,
-    MostrarKpicas1, MostrarKpicas2, MostrarKpicas3, MostrarKpicas4,
-    MostrarKpicas5, MostrarKpicas6, MostrarKpicas7, MostrarKpicas8,
-    MostrarKpicas9, MostrarKpicas10, MostrarKpicas11, MostrarKpicas12, MostrarKpicas13,
-    MostrarKtreboles1, MostrarKtreboles2, MostrarKtreboles3, MostrarKtreboles4,
-    MostrarKtreboles5, MostrarKtreboles6, MostrarKtreboles7, MostrarKtreboles8,
-    MostrarKtreboles9, MostrarKtreboles10, MostrarKtreboles11, MostrarKtreboles12, MostrarKtreboles13
+    // Corazones
+    Mostrar2corazones, Mostrar3corazones, Mostrar4corazones, Mostrar5corazones,
+    Mostrar6corazones, Mostrar7corazones, Mostrar8corazones, Mostrar9corazones,
+    Mostrar10corazones, MostrarJcorazones, MostrarQcorazones, MostrarKcorazones, MostrarAcorazones,
+
+    // Diamantes
+    Mostrar2diamantes, Mostrar3diamantes, Mostrar4diamantes, Mostrar5diamantes,
+    Mostrar6diamantes, Mostrar7diamantes, Mostrar8diamantes, Mostrar9diamantes,
+    Mostrar10diamantes, MostrarJdiamantes, MostrarQdiamantes, MostrarKdiamantes, MostrarAdiamantes,
+
+    // Tréboles
+    Mostrar2treboles, Mostrar3treboles, Mostrar4treboles, Mostrar5treboles,
+    Mostrar6treboles, Mostrar7treboles, Mostrar8treboles, Mostrar9treboles,
+    Mostrar10treboles, MostrarJtreboles, MostrarQtreboles, MostrarKtreboles, MostrarAtreboles,
+
+    // Picas
+    Mostrar2picas, Mostrar3picas, Mostrar4picas, Mostrar5picas,
+    Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
+    Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, MostrarApicas
 };
 
+
 FuncionCarta funcionesBorrar[52] = {
-    BorrarKcorazones1, BorrarKcorazones2, BorrarKcorazones3, BorrarKcorazones4,
-    BorrarKcorazones5, BorrarKcorazones6, BorrarKcorazones7, BorrarKcorazones8,
-    BorrarKcorazones9, BorrarKcorazones10, BorrarKcorazones11, BorrarKcorazones12, BorrarKcorazones13,
-    BorrarKdiamantes1, BorrarKdiamantes2, BorrarKdiamantes3, BorrarKdiamantes4,
-    BorrarKdiamantes5, BorrarKdiamantes6, BorrarKdiamantes7, BorrarKdiamantes8,
-    BorrarKdiamantes9, BorrarKdiamantes10, BorrarKdiamantes11, BorrarKdiamantes12, BorrarKdiamantes13,
-    BorrarKpicas1, BorrarKpicas2, BorrarKpicas3, BorrarKpicas4,
-    BorrarKpicas5, BorrarKpicas6, BorrarKpicas7, BorrarKpicas8,
-    BorrarKpicas9, BorrarKpicas10, BorrarKpicas11, BorrarKpicas12, BorrarKpicas13,
-    BorrarKtreboles1, BorrarKtreboles2, BorrarKtreboles3, BorrarKtreboles4,
-    BorrarKtreboles5, BorrarKtreboles6, BorrarKtreboles7, BorrarKtreboles8,
-    BorrarKtreboles9, BorrarKtreboles10, BorrarKtreboles11, BorrarKtreboles12, BorrarKtreboles13
+    // Corazones
+    Borrar2corazones, Borrar3corazones, Borrar4corazones, Borrar5corazones,
+    Borrar6corazones, Borrar7corazones, Borrar8corazones, Borrar9corazones,
+    Borrar10corazones, BorrarJcorazones, BorrarQcorazones, BorrarKcorazones, BorrarAcorazones,
+
+    // Diamantes
+    Borrar2diamantes, Borrar3diamantes, Borrar4diamantes, Borrar5diamantes,
+    Borrar6diamantes, Borrar7diamantes, Borrar8diamantes, Borrar9diamantes,
+    Borrar10diamantes, BorrarJdiamantes, BorrarQdiamantes, BorrarKdiamantes, BorrarAdiamantes,
+
+    // Tréboles
+    Borrar2treboles, Borrar3treboles, Borrar4treboles, Borrar5treboles,
+    Borrar6treboles, Borrar7treboles, Borrar8treboles, Borrar9treboles,
+    Borrar10treboles, BorrarJtreboles, BorrarQtreboles, BorrarKtreboles, BorrarAtreboles,
+
+    // Picas
+    Borrar2picas, Borrar3picas, Borrar4picas, Borrar5picas,
+    Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
+    Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas
 };
+
 
 void mostrarCartaCrupier(Carta x, int manoCrupier){
 	switch(manoCrupier) {
