@@ -14,6 +14,7 @@
 #include "portada.h"
 #include "seleccionarApuesta.h"
 #include "menuPausa.h"
+#include "victoria.h"
 
 
 
