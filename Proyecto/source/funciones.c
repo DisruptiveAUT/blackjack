@@ -5,7 +5,8 @@
 #include "definiciones.h"
 
 void shuffle(Carta mazo[], int n) {
-    for (int i = n - 1; i > 0; i--) {
+    int i;
+    for (i = n - 1; i > 0; i--) {
         int j = rand() % (i + 1);
         Carta temp = mazo[i];
         mazo[i] = mazo[j];
@@ -23,9 +24,9 @@ void construirBaraja(Carta baraja[]) {
         "Corazones", "Diamantes", "Treboles", "Picas"
     };
 
-    int k = 0;
-    for (int i = 0; i < 4; i++) {         // Palos
-        for (int j = 0; j < 13; j++) {    // Valores
+    int k = 0, i, j;
+    for (i = 0; i < 4; i++) {         // Palos
+        for (j = 0; j < 13; j++) {    // Valores
             baraja[k].id = k; // ID único de 0 a 51
 
             strcpy(baraja[k].valor, valores[j]);
