@@ -60,8 +60,11 @@ void juego()
 		 seg = 0;	
 		 apuesta = 0; 
 		 crupierMostradas = false;
-		 manoJugador[] = manoJugadorLimpio[];
-		 manoCrupier[] = manoCrupierLimpio[];
+		 for (int i = 0; i < 5; i++) {
+    		manoJugador[i] = manoJugadorLimpio[i];
+   			manoCrupier[i] = manoCrupierLimpio[i];
+			}
+		
 		 construirBaraja(baraja);
 		 shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	}
