@@ -60,8 +60,8 @@ void juego()
 		 seg = 0;	
 		 apuesta = 0; 
 		 crupierMostradas = false;
-		 manoJugador = manoJugadorLimpio;
-		 manoCrupier = manoCrupierLimpio;
+		 manoJugador[] = manoJugadorLimpio[];
+		 manoCrupier[] = manoCrupierLimpio[];
 		 construirBaraja(baraja);
 		 shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	}
@@ -145,7 +145,7 @@ void juego()
 			}else {
 				cartasJugador = cartasJugador + manoJugador[i].valorNum;
 			}
-			ponerCartaJugador(manoJugador[i], i); // poner las primeras dos cartas robadas del jugador en sus espacios
+			mostrarCartaCrupier(manoJugador[i], i); // poner las primeras dos cartas robadas del jugador en sus espacios
 
 		}
 		for (i = 0; i < 2; i++ ){ //las dos cartas obligatorias del crupier
@@ -173,7 +173,7 @@ void juego()
 				}
 				int i;
 				for (i = 0; i < contadorCrupier-1; i++){
-					ponerCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
+					mostrarCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
 
 				}
 			if (calcularPartida(cartasJugador, cartasCrupier)){// si se pierde la partida cambiar estado 
@@ -189,7 +189,7 @@ void juego()
 			pos_pantalla.py >= 64 && pos_pantalla.py < 96 ) { //pulsa el boton de hit
 			
 			robarCartaJugador();
-			ponerCartaJugador(manoJugador[contadorJugador-1], contadorJugador-1);
+			mostrarCartaCrupier(manoJugador[contadorJugador-1], contadorJugador-1);
 			
 		}
 			
@@ -200,11 +200,11 @@ void juego()
 			diseno();
 			int i;
 			for (i = 0; i < contadorJugador - 1; i++){
-				ponerCartaJugador(manoJugador[i], i);
+				mostrarCartaCrupier(manoJugador[i], i);
 			}
 			if(crupierMostradas == true){
 				for (i = 0; i < contadorCrupier - 1; i++){
-					ponerCartaCrupier(manoCrupier[i], i);
+					mostrarCartaCrupier(manoCrupier[i], i);
 				}
 			}
 		}else if (pos_pantalla.px >= 175 && pos_pantalla.px <= 207 &&
@@ -217,16 +217,16 @@ void juego()
 		}
 	}else if (ESTADO == FIN){
 		if (dinero <= 0){
-			mostrarPerdido();
-			partidaPerdida()
+			partidaPerdida();
+			partidaPerdida();
 			dinero = 100;
 			vaciarVariables();
-			mostrarInicio();
+			portada();
 			ESTADO = INICIO;
 			portada();
 		}
-		if (TeclaPulsada() == A || pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
-			pos_pantalla.py >= 1 && pos_pantalla.py <= 192){ //tocar la pantalla o pulsar a
+		if ((TeclaPulsada() == A) || (pos_pantalla.px >= 1) && (pos_pantalla.px <= 254) &&
+			(pos_pantalla.py >= 1) && (pos_pantalla.py <= 192)){ //tocar la pantalla o pulsar a
 			ESTADO = APOSTAR;
 			vaciarVariables();
 			portada();
