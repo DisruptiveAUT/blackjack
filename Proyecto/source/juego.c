@@ -51,6 +51,7 @@ void juego()
 	Carta baraja [52];
 	construirBaraja(baraja);
 	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
+	int i = 0;
 	void vaciarVariables(){
 		 cartasCrupier = 0;
 		 cartasJugador = 0;
@@ -60,8 +61,11 @@ void juego()
 		 seg = 0;	
 		 apuesta = 0; 
 		 crupierMostradas = false;
-		 manoJugador[] = manoJugadorLimpio[];
-		 manoCrupier[] = manoCrupierLimpio[];
+		 for ( i = 0; i < 5; i++) {
+    		manoJugador[i] = manoJugadorLimpio[i];
+   			manoCrupier[i] = manoCrupierLimpio[i];
+			}
+		
 		 construirBaraja(baraja);
 		 shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	}
@@ -131,7 +135,7 @@ void juego()
 		diseno();
 		if (contadorBaraja < 4 ){
 
-		int i;
+		
 		for (i = 0; i < 2; i++){ //las dos cartas obligatorias del Jugador 
 			manoJugador[i] = robarCarta( contadorBaraja, baraja);
 			contadorBaraja++;	
