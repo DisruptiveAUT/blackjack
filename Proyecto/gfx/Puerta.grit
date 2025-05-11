@@ -9,3 +9,6 @@
 
 # Set the bit depth to 16
 -gB16
+
+# Generate .h file
+-header
