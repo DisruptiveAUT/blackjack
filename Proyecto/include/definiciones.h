@@ -45,6 +45,9 @@ touchPosition PANT_DAT;
 #define R			8 
 #define L			9
 
+extern int cartasJugador;
+extern int cartasCrupier;
+
 // Nombres asignados a los estados
 #define INICIO 0
 #define APOSTAR 1
