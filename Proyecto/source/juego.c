@@ -15,6 +15,9 @@
 #include "rutinasAtencion.h"
 #include "fondos.h"
 #include "sprites.h"
+#include "funciones.h"
+#include "funciones2.h"
+
 
 //int tiempo;
 
@@ -40,8 +43,14 @@ void juego()
 	int dinero = 100; 
 	int apuesta = 0;
 	bool crupierMostradas = false;  
+	Carta manoJugador[5]; 
+	Carta manoCrupier[5];
 	Carta manoJugadorLimpio[5]; 
 	Carta manoCrupierLimpio[5];
+	srand(time(NULL));
+	Carta baraja [52];
+	construirBaraja(baraja);
+	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	void vaciarVariables(){
 		 cartasCrupier = 0;
 		 cartasJugador = 0;
@@ -56,11 +65,7 @@ void juego()
 		 construirBaraja(baraja);
 		 shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	}
-	
-	srand(time(NULL));
-	Carta baraja [52];
-	construirBaraja(baraja);
-	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
+
 	touchPosition pos_pantalla;
 	void robarCartaJugador(){
 		manoJugador[contadorJugador] =  robarCarta( contadorBaraja, baraja);
@@ -166,7 +171,8 @@ void juego()
 				while (cartasCrupier < 17){ //el crupier deja de robar si tiene 17 o mas
 					robarCartaCrupier();
 				}
-				for (int i = 0; i < contadorCrupier-1; i++){
+				int i;
+				for (i = 0; i < contadorCrupier-1; i++){
 					ponerCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
 
 				}
@@ -192,11 +198,12 @@ void juego()
 			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de reanudar
 			ESTADO = JUGAR;
 			diseno();
-			for (int i = 0; i < contadorJugador - 1; i++){
+			int i;
+			for (i = 0; i < contadorJugador - 1; i++){
 				ponerCartaJugador(manoJugador[i], i);
 			}
 			if(crupierMostradas == true){
-				for (int i = 0; i < contadorCrupier - 1; i++){
+				for (i = 0; i < contadorCrupier - 1; i++){
 					ponerCartaCrupier(manoCrupier[i], i);
 				}
 			}
