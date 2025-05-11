@@ -126,8 +126,8 @@ void juego()
 		diseno();
 		if (contadorBaraja < 4 ){
 
-		
-		for (int i = 0; i < 2; i++){ //las dos cartas obligatorias del Jugador 
+		int i;
+		for (i = 0; i < 2; i++){ //las dos cartas obligatorias del Jugador 
 			manoJugador[i] = robarCarta( contadorBaraja, baraja);
 			contadorBaraja++;	
 			contadorJugador++;
@@ -143,7 +143,7 @@ void juego()
 			ponerCartaJugador(manoJugador[i], i); // poner las primeras dos cartas robadas del jugador en sus espacios
 
 		}
-		for (int i = 0; i < 2; i++ ){ //las dos cartas obligatorias del crupier
+		for (i = 0; i < 2; i++ ){ //las dos cartas obligatorias del crupier
 			manoCrupier[i] = robarCarta( contadorBaraja, baraja);
 			contadorBaraja++;
 			contadorCrupier++;
