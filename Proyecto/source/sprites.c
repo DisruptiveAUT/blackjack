@@ -2744,9 +2744,9 @@ void mostrarCarta(Carta c, int x, int y) {
 void borrarCarta(Carta c, int x, int y) {
     funcionesBorrar[c.id](c.id, x, y);
 }
-
+int i = 0;
 void borrarCartaCrupier(Carta cartas[]){
-	for (int i = 0; i < 10; i++) {
+	for (i = 0; i < 10; i++) {
         if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
             break;
         }
@@ -2772,7 +2772,7 @@ void borrarCartaCrupier(Carta cartas[]){
 }
 
 void borrarCartaJugador(Carta cartas[]){
-	for (int i = 0; i < 10; i++) {
+	for ( i = 0; i < 10; i++) {
         if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
             break;
         }
