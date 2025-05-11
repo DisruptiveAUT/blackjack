@@ -1,5 +1,5 @@
 // Curso 2024-2025
-
+#include "definiciones.h"
 extern u16* gfx;
 extern u16* gfx2;
 extern u16* gfx3;
