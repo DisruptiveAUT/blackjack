@@ -61,7 +61,7 @@ void juego()
 		 seg = 0;	
 		 apuesta = 0; 
 		 crupierMostradas = false;
-		 for (  = 0; i < 5; i++) {
+		 for ( i = 0; i < 5; i++) {
     		manoJugador[i] = manoJugadorLimpio[i];
    			manoCrupier[i] = manoCrupierLimpio[i];
 			}
