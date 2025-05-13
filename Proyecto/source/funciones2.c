@@ -15,26 +15,26 @@ bool calcularPartida(int valorJugador, int valorCrupier){
     
     if(valorJugador > 21){
         if (valorCrupier > 21){
-            return TRUE;
+            return true;
         }
         else{
-            return FALSE;
+            return false;
         }
     }
     else if(valorJugador == 21){
-        return TRUE;
+        return true;
     }
     else if(valorJugador < 21) 
         if (valorCrupier < 21){
             if (valorCrupier > valorJugador){
-                return FALSE;
+                return false;
             }
         }
         else if(valorCrupier == 21){
-            return FALSE;
+            return false;
         }
         else if(valorCrupier > 21){
-            return TRUE;
+            return true;
         }
         
 }
