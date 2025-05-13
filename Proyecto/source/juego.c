@@ -24,6 +24,25 @@ bool llamadaCalcularPartida(){
 
 //int tiempo;
 
+// juego.c (antes de la función juego())
+
+int cartasCrupier = 0;
+int cartasJugador = 0;
+int contadorBaraja = 0;
+int contadorCrupier = 0;
+int contadorJugador = 0;
+int seg = 0;
+int dinero = 100;
+int apuesta = 0;
+bool crupierMostradas = false;
+
+Carta manoJugador[5];
+Carta manoCrupier[5];
+Carta manoJugadorLimpio[5];
+Carta manoCrupierLimpio[5];
+Carta baraja[52];
+
+
 void juego()
 {	
 
