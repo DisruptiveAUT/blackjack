@@ -10,7 +10,9 @@ rutinasAtencion.c
 #include "perifericos.h"
 #include "fondos.h"
 #include "sprites.h"
+#include "funciones.h"
 #include "funciones2.h"
+#include  "juego.h"
 
 
 int ESTADO; // Para controlar el estado del autómata en que esté
@@ -46,7 +48,7 @@ if (ESTADO!=INICIO)
 	}
 	if (ESTADO == JUGAR){
 		
-		if (seg ==120){
+		if (seg == 120){
 			if(calcularPartida(cartasJugador, cartasCrupier)){
 				ESTADO = GANAR;
 				victoria();
@@ -58,7 +60,7 @@ if (ESTADO!=INICIO)
 			
 		}
 	}else if (ESTADO == GANAR){
-		if(seg = 10){
+		if(seg == 10){
 			ESTADO = APOSTAR;
 			seleccionarApuesta();
 			seg = 0;
