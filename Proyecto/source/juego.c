@@ -18,6 +18,9 @@
 #include "funciones.h"
 #include "funciones2.h"
 
+void llamadaCalcularPartida(){
+	calcularPartida(cartasJugador,cartasCrupier);
+}
 
 //int tiempo;
 
@@ -250,6 +253,9 @@ void juego()
 	// Inhibir las interrupciones al final
 	} //FINAL WHILE PRINCIPAL 
 }
+
+
+
 
 /***********************2024-2025*******************************/
 

@@ -49,7 +49,7 @@ if (ESTADO!=INICIO)
 	if (ESTADO == JUGAR){
 		
 		if (seg == 120){
-			if(calcularPartida(cartasJugador, cartasCrupier)){
+			if(llamadaCalcularPartida()){
 				ESTADO = GANAR;
 				victoria();
 			}else{
