@@ -4,6 +4,7 @@
 #include "perifericos.h"
 #include "fondos.h"
 #include "sprites.h"
+#include <stdbool.h>
 
 
 Carta robarCarta(int cont, Carta x[]){
@@ -11,7 +12,7 @@ Carta robarCarta(int cont, Carta x[]){
     return x[cont];
 }
 
-bool calcularPartida(int valorJugador, int valorCrupier){
+/*bool calcularPartida(int valorJugador, int valorCrupier){
     
     if(valorJugador > 21){
         if (valorCrupier > 21){
@@ -37,4 +38,24 @@ bool calcularPartida(int valorJugador, int valorCrupier){
             return true;
         }
         
+}*/
+
+
+bool calcularPartida(int valorJugador, int valorCrupier) {
+    if (valorJugador > 21) {
+        return valorCrupier > 21 ? true : false;
+    }
+
+    if (valorJugador == 21) {
+        return true;
+    }
+
+    // valorJugador < 21
+    if (valorCrupier == 21 || (valorCrupier < 21 && valorCrupier > valorJugador)) {
+        return false;
+    }
+
+    return true; // jugador gana si crupier se pasa o tiene menos valor
 }
+
+
