@@ -11,6 +11,7 @@ rutinasAtencion.c
 #include "fondos.h"
 #include "sprites.h"
 #include "funciones2.h"
+#include "juego.h"
 
 
 int ESTADO; // Para controlar el estado del autómata en que esté
