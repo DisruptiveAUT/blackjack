@@ -6,7 +6,7 @@ juego.h
 void vaciarVariables();
 void robarCartaJugador();
 void robarCartaCrupier();
-void llamadaCalcularPartida();
+bool llamadaCalcularPartida();
 
 
 /***********************2024-2025*******************************/

@@ -18,7 +18,7 @@
 #include "funciones.h"
 #include "funciones2.h"
 
-void llamadaCalcularPartida(){
+bool llamadaCalcularPartida(){
 	calcularPartida(cartasJugador,cartasCrupier);
 }
 
