@@ -122,13 +122,14 @@ void juego()
 
 	while(1)
 	{	
+		touchRead(&pos_pantalla);
 		iprintf("\x1b[11;5HDinero apostado=%d", apuesta);
 		iprintf("\x1b[10;5HDinero restante=%d", dinero);
 	if (ESTADO == INICIO){
 		portada();
 	
 		if ((pos_pantalla.px >= 1 && pos_pantalla.px <= 256 &&
-			pos_pantalla.py >= 1 && pos_pantalla.py <= 192)|| TeclaPulsada() == START){ //si se pulsa START o se le da al boton central
+			pos_pantalla.py >= 1 && pos_pantalla.py <= 192) || TeclaPulsada() == START){ //si se pulsa START o se le da al boton central
 	
 		ESTADO = APOSTAR;
 		}
