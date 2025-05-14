@@ -92,7 +92,7 @@ void memoriaReserva()
 	/* Por cada sprite que se quiera incluir en la pantalla principal hay que hacer algo equivalente a lo que sigue */
 	gfxrombo= oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
 	gfxromboGrande=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
-
+	/*
 	gfxrevesCarta=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
 	gfxreanudarFlecha=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
@@ -161,8 +161,8 @@ void memoriaReserva()
 	gfxKpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	gfxKcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	gfxKdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
-	gfxKtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
-}
+	gfxKtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);*/
+} 
 
 /* A cada uno de los 256 valores que puede tomar un píxel en la PALETA PRINCIPAL
    se le puede asignar un color. El valor 0 es transparente. Los valores sin definir son negros. 
@@ -2925,6 +2925,7 @@ void borrarCartaCrupier(struct Carta cartas[]){
 }
 
 void borrarCartaJugador(struct Carta cartas[]){
+	int i;
 	for ( i = 0; i < 10; i++) {
         if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
             break;
