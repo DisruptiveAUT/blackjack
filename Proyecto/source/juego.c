@@ -18,9 +18,7 @@
 #include "funciones.h"
 #include "funciones2.h"
 
-bool llamadaCalcularPartida(){
-	calcularPartida(cartasJugador,cartasCrupier);
-}
+
 
 //int tiempo;
 
@@ -36,6 +34,9 @@ int dinero = 100;
 int apuesta = 0;
 bool crupierMostradas = false;
 
+bool llamadaCalcularPartida(){
+	return calcularPartida(cartasJugador,cartasCrupier);
+}
 
 struct Carta manoJugador[5];
 struct Carta manoCrupier[5];
@@ -126,8 +127,8 @@ void juego()
 	if (ESTADO == INICIO){
 		portada();
 	
-		if ((pos_pantalla.px >= 29 && pos_pantalla.px <= 229 &&
-			pos_pantalla.py >= 46 && pos_pantalla.py <= 101)){ //si se pulsa START o se le da al boton central
+		if ((pos_pantalla.px >= 1 && pos_pantalla.px <= 256 &&
+			pos_pantalla.py >= 1 && pos_pantalla.py <= 192)|| TeclaPulsada() == START){ //si se pulsa START o se le da al boton central
 	
 		ESTADO = APOSTAR;
 		}

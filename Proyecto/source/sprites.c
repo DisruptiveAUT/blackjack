@@ -2846,11 +2846,11 @@ FuncionCarta funcionesBorrar[52] = {
 };
 */
 void mostrarCarta(struct Carta c, int x, int y) {
-    funcionesMostrar[c.id](c.id, x, y);
+    //funcionesMostrar[c.id](c.id, x, y);
 }
 
 void borrarCarta(struct Carta c, int x, int y) {
-    funcionesBorrar[c.id](c.id, x, y);
+    //funcionesBorrar[c.id](c.id, x, y);
 }
 
 
