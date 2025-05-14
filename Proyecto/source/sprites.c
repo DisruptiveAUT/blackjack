@@ -45,42 +45,42 @@ u16* gfx5picas;
 u16* gfx5diamantes;
 u16* gfx5treboles;*/
 
-u16* gfx6picas;
+// u16* gfx6picas;
 /*u16* gfx6corazones;
 u16* gfx6diamantes;
 u16* gfx6treboles;*/
 
-u16* gfx7picas;
+// u16* gfx7picas;
 // u16* gfx7corazones;
 // u16* gfx7diamantes;
 // u16* gfx7treboles;
 
-u16* gfx8picas;
+// u16* gfx8picas;
 // u16* gfx8corazones;
 // u16* gfx8diamantes;
 // u16* gfx8treboles;
 
-u16* gfx9picas;
+// u16* gfx9picas;
 // u16* gfx9corazones;
 // u16* gfx9diamantes;
 // u16* gfx9treboles;
 
-u16* gfx10picas;
+// u16* gfx10picas;
 // u16* gfx10corazones;
 // u16* gfx10diamantes;
 // u16* gfx10treboles;
 
-u16* gfxJpicas;
+// u16* gfxJpicas;
 // u16* gfxJcorazones;
 // u16* gfxJdiamantes;
 // u16* gfxJtreboles;
 
-u16* gfxQpicas;
+// u16* gfxQpicas;
 // u16* gfxQcorazones;
 // u16* gfxQdiamantes;
 // u16* gfxQtreboles;
 
-u16* gfxKpicas;
+// u16* gfxKpicas;
 // u16* gfxKcorazones;
 // u16* gfxKdiamantes;
 // u16* gfxKtreboles;
