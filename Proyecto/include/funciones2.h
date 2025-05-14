@@ -1,5 +1,5 @@
 //funciones2.h
 
 
-extern Carta robarCarta(int cont, Carta x[]);
+extern struct Carta robarCarta(int cont, struct Carta x[]);
 extern bool calcularPartida(int valorJugador, int valorCrupier);

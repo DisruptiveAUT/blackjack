@@ -36,45 +36,15 @@ int dinero = 100;
 int apuesta = 0;
 bool crupierMostradas = false;
 
-Carta manoJugador[5];
-Carta manoCrupier[5];
-Carta manoJugadorLimpio[5];
-Carta manoCrupierLimpio[5];
-Carta baraja[52];
 
+struct Carta manoJugador[5];
+struct Carta manoCrupier[5];
+struct Carta manoJugadorLimpio[5];
+struct Carta manoCrupierLimpio[5];
+struct Carta baraja[52];
 
-void juego()
-{	
-
-	int Conf_Tec = 0x400C; //a insertar en TECLAS_CNT activa START Y SELECT 0100 0000 0000 1100 
-	int Conf_Tempo = 0xC1; //a insertar en TIMER0_CNT 1100 0001
-	int latch = 48060 ; //latch pasar a timer0_DAT
-	ConfigurarTeclado(Conf_Tec);
-	ConfigurarTemporizador( latch , Conf_Tempo);
-	EstablecerVectorInt();
-	HabilitarIntTeclado();
-	HabilitarIntTempo();
-	PonerEnMarchaTempo();
-	EstablecerVectorInt();
-	int cartasCrupier = 0; //valor numerico de la mano en total
-	int cartasJugador = 0; //valor numerico de la mano en total
-	int contadorBaraja = 0; //cantidad de cartas robadas
-	int contadorCrupier = 0; //cantidad de cartas robadas (apunta siempre al siguiente)
-	int contadorJugador = 0; //cantidad de cartas robadas (apunta siempre al siguiente)
-	int seg = 0;
-	int dinero = 100; 
-	int apuesta = 0;
-	bool crupierMostradas = false;  
-	Carta manoJugador[5]; 
-	Carta manoCrupier[5];
-	Carta manoJugadorLimpio[5]; 
-	Carta manoCrupierLimpio[5];
-	srand(time(NULL));
-	Carta baraja [52];
-	construirBaraja(baraja);
-	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
-	int i = 0;
 	void vaciarVariables(){
+		int i;
 		 cartasCrupier = 0;
 		 cartasJugador = 0;
 		 contadorBaraja = 0;
@@ -92,7 +62,7 @@ void juego()
 		 shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
 	}
 
-	touchPosition pos_pantalla;
+	
 	void robarCartaJugador(){
 		manoJugador[contadorJugador] =  robarCarta( contadorBaraja, baraja);
 			cartasJugador = cartasJugador + manoJugador[contadorJugador].valorNum; 
@@ -111,6 +81,43 @@ void juego()
 			}
 			contadorCrupier++;
 	}
+
+
+
+void juego()
+{	
+	int i;
+	touchPosition pos_pantalla;
+	int Conf_Tec = 0x400C; //a insertar en TECLAS_CNT activa START Y SELECT 0100 0000 0000 1100 
+	int Conf_Tempo = 0xC1; //a insertar en TIMER0_CNT 1100 0001
+	int latch = 48060 ; //latch pasar a timer0_DAT
+	ConfigurarTeclado(Conf_Tec);
+	ConfigurarTemporizador( latch , Conf_Tempo);
+	EstablecerVectorInt();
+	HabilitarIntTeclado();
+	HabilitarIntTempo();
+	PonerEnMarchaTempo();
+	//EstablecerVectorInt();
+	//int cartasCrupier = 0; //valor numerico de la mano en total
+	/*int cartasJugador = 0; //valor numerico de la mano en total
+	int contadorBaraja = 0; //cantidad de cartas robadas
+	int contadorCrupier = 0; //cantidad de cartas robadas (apunta siempre al siguiente)
+	int contadorJugador = 0; //cantidad de cartas robadas (apunta siempre al siguiente)
+	int seg = 0;
+	int dinero = 100; 
+	int apuesta = 0;
+	bool crupierMostradas = false;  
+	Carta manoJugador[5]; 
+	Carta manoCrupier[5];
+	Carta manoJugadorLimpio[5]; 
+	Carta manoCrupierLimpio[5];*/
+	srand(time(NULL));
+//	Carta baraja [52];
+	construirBaraja(baraja);
+	shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
+	
+	
+	
 
 	while(1)
 	{	
@@ -197,7 +204,7 @@ void juego()
 				while (cartasCrupier < 17){ //el crupier deja de robar si tiene 17 o mas
 					robarCartaCrupier();
 				}
-				int i;
+			
 				for (i = 0; i < contadorCrupier-1; i++){
 					mostrarCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
 
@@ -224,7 +231,7 @@ void juego()
 			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de reanudar
 			ESTADO = JUGAR;
 			diseno();
-			int i;
+			
 			for (i = 0; i < contadorJugador - 1; i++){
 				mostrarCartaCrupier(manoJugador[i], i);
 			}

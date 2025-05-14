@@ -2845,8 +2845,16 @@ FuncionCarta funcionesBorrar[52] = {
     Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas
 };
 
+void mostrarCarta(struct Carta c, int x, int y) {
+    funcionesMostrar[c.id](c.id, x, y);
+}
 
-void mostrarCartaCrupier(Carta x, int manoCrupier){
+void borrarCarta(struct Carta c, int x, int y) {
+    funcionesBorrar[c.id](c.id, x, y);
+}
+
+
+void mostrarCartaCrupier(struct Carta x, int manoCrupier){
 	switch(manoCrupier) {
         case 1:
             mostrarCarta(x, 28, 10);
@@ -2866,7 +2874,7 @@ void mostrarCartaCrupier(Carta x, int manoCrupier){
             break;
     }
 }
-void mostrarCartaJugador(Carta x, int manoJugador){
+void mostrarCartaJugador(struct Carta x, int manoJugador){
 	switch(manoJugador) {
         case 1:
 			mostrarCarta(x, 28, 134);
@@ -2887,15 +2895,10 @@ void mostrarCartaJugador(Carta x, int manoJugador){
     }
 }
 
-void mostrarCarta(Carta c, int x, int y) {
-    funcionesMostrar[c.id](c.id, x, y);
-}
 
-void borrarCarta(Carta c, int x, int y) {
-    funcionesBorrar[c.id](c.id, x, y);
-}
-int i = 0;
-void borrarCartaCrupier(Carta cartas[]){
+
+void borrarCartaCrupier(struct Carta cartas[]){
+	int i;
 	for (i = 0; i < 10; i++) {
         if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
             break;
@@ -2921,7 +2924,7 @@ void borrarCartaCrupier(Carta cartas[]){
     }
 }
 
-void borrarCartaJugador(Carta cartas[]){
+void borrarCartaJugador(struct Carta cartas[]){
 	for ( i = 0; i < 10; i++) {
         if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
             break;

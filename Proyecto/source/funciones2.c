@@ -7,7 +7,7 @@
 #include <stdbool.h>
 
 
-Carta robarCarta(int cont, Carta x[]){
+struct Carta robarCarta(int cont, struct Carta x[]){
     cont ++;
     return x[cont];
 }

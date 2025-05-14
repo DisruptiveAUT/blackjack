@@ -1,5 +1,5 @@
 //funciones.h
 
 
-extern void shuffle(Carta mazo[], int n);
-extern void construirBaraja(Carta baraja[]);
+extern void shuffle(struct Carta mazo[], int n);
+extern void construirBaraja(struct Carta baraja[]);

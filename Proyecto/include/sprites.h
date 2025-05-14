@@ -494,9 +494,9 @@ extern void MostrarKtreboles(int indice, int x, int y);
 extern void BorrarKtreboles(int indice, int x, int y);
 /* Esta función borra de la pantalla el K de treboles con el índice que se le indique como parámetro */
 
-extern void mostrarCartaCrupier(Carta x, int manoCrupier);
+extern void mostrarCartaCrupier(struct Carta x, int manoCrupier);
 
-extern void mostrarCartaJugador(Carta x, int manoJugador);
+extern void mostrarCartaJugador(struct Carta x, int manoJugador);
 
 
 

@@ -3,8 +3,8 @@
 /*-------------------------------------
            definiciones.h
 -------------------------------------*/
-#ifndef DEFINICIONES_H;
-#define DEFINICIONES_H
+
+
 #include <nds.h> 		// Librería de la nds
 #include <stdio.h>		// Librería de entrada/salida estándar de C
 #include <stdlib.h>		// Librería estándar de C para reserva de memoria y conversiones numéricas
@@ -58,13 +58,12 @@ extern int cartasCrupier;
 
 extern int ESTADO;
 
-typedef struct {
+struct Carta{
     int id;
     char palo[20];
     char valor[5];
     int valorNum;
-} Carta;
+} ;
 
-#endif // DEFINICIONES_H
 /***********************2024-2025*******************************/
 
