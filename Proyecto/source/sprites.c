@@ -122,42 +122,42 @@ void memoriaReserva()
 	// gfx5diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx5treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx6picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfx6picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx6corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx6diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx6treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx7picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfx7picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx7corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx7diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx7treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx8picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfx8picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx8corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx8diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx8treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx9picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfx9picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx9corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx9diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx9treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx10picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfx10picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx10corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx10diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx10treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfxJpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfxJpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxJcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxJdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxJtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfxQpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfxQpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxQcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxQdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxQtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfxKpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+//	gfxKpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxKcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxKdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxKtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
@@ -220,7 +220,7 @@ u8 rombo[256] =
         1,1,0,0,0,0,0,0,	//	0,0,0,0,0,0,1,1, 1,1,0,0,0,0,0,0,
 };*/
 
-u8 romboGrande[1024] = 
+/*u8 romboGrande[1024] = 
 {
 	0,0,0,0,0,0,2,2,0,0,0,0,0,2,2,2,0,0,0,0,2,2,2,2,0,0,0,2,2,2,2,2,0,0,2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,	
 
@@ -253,7 +253,7 @@ u8 romboGrande[1024] =
 	3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,	
 
 	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,0,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,	
-};
+};*/
 
 /*u8 revesCarta[1024] = 
 {
