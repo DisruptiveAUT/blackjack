@@ -2813,55 +2813,55 @@ oamUpdate(&oamMain);
 
 FuncionCarta funcionesMostrar[12] = {
     // Picas
-    Mostrar2picas, Mostrar3picas, Mostrar4picas, 
+    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
-    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, MostrarApicas,
+    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas,
 
 	// Picas
-    Mostrar2picas, Mostrar3picas, Mostrar4picas, 
+    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
-    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, MostrarApicas,
+    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, 
 
 	// Picas
-    Mostrar2picas, Mostrar3picas, Mostrar4picas, 
+    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
-    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, MostrarApicas,
+    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, 
 
     // Picas
-    Mostrar2picas, Mostrar3picas, Mostrar4picas 
+    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// ,Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
-    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, MostrarApicas
+    // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas
 };
 
 
 FuncionCarta funcionesBorrar[12] = {
     // Picas
-    Borrar2picas, Borrar3picas, Borrar4picas
+    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
-    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas,
+    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
 
     // Picas
-    Borrar2picas, Borrar3picas, Borrar4picas
+    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
-    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas,
+    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
 
     // Picas
-    Borrar2picas, Borrar3picas, Borrar4picas
+    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
-    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas,
+    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
 
     // Picas
-    Borrar2picas, Borrar3picas, Borrar4picas
+    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
-    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas
+    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas
 };
 
 void mostrarCarta(struct Carta c, int x, int y) {
