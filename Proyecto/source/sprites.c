@@ -2871,19 +2871,19 @@ void borrarCarta(struct Carta c, int x, int y) {
 
 void mostrarCartaCrupier(struct Carta x, int manoCrupier){
 	switch(manoCrupier) {
-        case 1:
+        case 0:
             mostrarCarta(x, 28, 10);
             break;
-        case 2:
+        case 1:
             mostrarCarta(x, 70, 10);
             break;
-        case 3:
+        case 2:
             mostrarCarta(x, 112, 10);
             break;
-		case 4:
+		case 3:
 			mostrarCarta(x, 154, 10);
 			break;
-		case 5:
+		case 4:
 			mostrarCarta(x, 196, 10);
         default:
             break;
@@ -2891,19 +2891,19 @@ void mostrarCartaCrupier(struct Carta x, int manoCrupier){
 }
 void mostrarCartaJugador(struct Carta x, int manoJugador){
 	switch(manoJugador) {
-        case 1:
+        case 0:
 			mostrarCarta(x, 28, 134);
             break;
-        case 2:
+        case 1:
 			mostrarCarta(x, 70, 134);
             break;
-        case 3:
+        case 2:
 			mostrarCarta(x, 112, 134);
             break;
-		case 4:
+		case 3:
 			mostrarCarta(x, 154, 134);
 			break;
-		case 5:
+		case 4:
 			mostrarCarta(x, 196, 134);
         default:
             break;
