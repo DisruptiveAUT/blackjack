@@ -388,11 +388,11 @@ extern void Borrar10picas(int indice, int x, int y);
 
 
 //J de picas
-// extern void MostrarJpicas(int indice, int x, int y);
+extern void MostrarJpicas(int indice, int x, int y);
 /* Esta función dibuja un J de picas en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void BorrarJpicas(int indice, int x, int y);
+extern void BorrarJpicas(int indice, int x, int y);
 /* Esta función borra de la pantalla el J de picas con el índice que se le indique como parámetro */
 
 
@@ -424,11 +424,11 @@ extern void Borrar10picas(int indice, int x, int y);
 
 
 //Reina de picas
-// extern void MostrarQpicas(int indice, int x, int y);
+extern void MostrarQpicas(int indice, int x, int y);
 /* Esta función dibuja un Q de picas en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void BorrarQpicas(int indice, int x, int y);
+extern void BorrarQpicas(int indice, int x, int y);
 /* Esta función borra de la pantalla el Q de picas con el índice que se le indique como parámetro */
 
 
