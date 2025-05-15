@@ -298,12 +298,12 @@ void juego()
 			
 		if (dinero <= 0){
 			partidaPerdida();
-			partidaPerdida();
+		
 			dinero = 100;
 			vaciarVariables();
 			portada();
 			ESTADO = INICIO;
-			portada();
+		
 		}
 		if ((TeclaPulsada() == A) || (pos_pantalla.px >= 1) && (pos_pantalla.px <= 254) &&
 			(pos_pantalla.py >= 1) && (pos_pantalla.py <= 192)){ //tocar la pantalla o pulsar a

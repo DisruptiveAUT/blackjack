@@ -460,11 +460,11 @@ extern void BorrarQpicas(int indice, int x, int y);
 
 
 //Rey de picas
-// extern void MostrarKpicas(int indice, int x, int y);
+extern void MostrarKpicas(int indice, int x, int y);
 /* Esta función dibuja un K de picas en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void BorrarKpicas(int indice, int x, int y);
+extern void BorrarKpicas(int indice, int x, int y);
 /* Esta función borra de la pantalla el K de picas con el índice que se le indique como parámetro */
 
 
