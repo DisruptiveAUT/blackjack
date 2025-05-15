@@ -13,7 +13,7 @@ Código desarrollado basado en el ejemplo "Simple sprite demo" de dovoto y en ot
 #include "definiciones.h"
 #include "cartas_funciones.h"
 
-u16* gfxrombo;
+//u16* gfxrombo;
 
 // u16* gfxrevesCarta;
 
@@ -40,7 +40,7 @@ u16* gfx4picas;
 u16* gfx4diamantes;
 u16* gfx4treboles;*/
 
-u16* gfx5picas;
+// u16* gfx5picas;
 /*u16* gfx5corazones;
 u16* gfx5diamantes;
 u16* gfx5treboles;*/
@@ -89,7 +89,7 @@ u16* gfx6treboles;*/
 void memoriaReserva()
 {
 	/* Por cada sprite que se quiera incluir en la pantalla principal hay que hacer algo equivalente a lo que sigue */
-	gfxrombo= oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
+	// gfxrombo= oamAllocateGfx(&oamMain, SpriteSize_16x16, SpriteColorFormat_256Color);
 	// gfxromboGrande=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	
 	// gfxrevesCarta=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
@@ -117,47 +117,47 @@ void memoriaReserva()
 	// gfx4diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx4treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx5picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfx5picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx5corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx5diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx5treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx6picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfx6picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx6corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx6diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx6treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx7picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfx7picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx7corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx7diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx7treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx8picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfx8picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx8corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx8diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx8treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx9picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfx9picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx9corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx9diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx9treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfx10picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfx10picas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx10corazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx10diamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfx10treboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfxJpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfxJpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxJcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxJdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxJtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfxQpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfxQpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxQcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxQdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxQtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 
-	gfxKpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
+	// gfxKpicas=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxKcorazones=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxKdiamantes=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
 	// gfxKtreboles=oamAllocateGfx(&oamMain, SpriteSize_32x32, SpriteColorFormat_256Color);
@@ -219,7 +219,7 @@ u8 rombo[256] =
 	1,1,1,0,0,0,0,0,
         1,1,0,0,0,0,0,0,	//	0,0,0,0,0,0,1,1, 1,1,0,0,0,0,0,0,
 };*/
-
+/*
 u8 romboGrande[1024] = 
 {
 	0,0,0,0,0,0,2,2,0,0,0,0,0,2,2,2,0,0,0,0,2,2,2,2,0,0,0,2,2,2,2,2,0,0,2,2,2,2,2,2,0,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,	
@@ -254,7 +254,7 @@ u8 romboGrande[1024] =
 
 	1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,0,0,1,1,1,1,1,0,0,0,1,1,1,1,0,0,0,0,1,1,1,0,0,0,0,0,1,1,0,0,0,0,0,0,	
 };
-
+*/
 /*u8 revesCarta[1024] = 
 {
 	0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1, 0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0, 1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,
@@ -548,14 +548,14 @@ void GuardarSpritesMemoria(){
 	
 int i;
 	//sprite de 16*16
-	for(i = 0; i < 16 * 16 / 2; i++) 
-	{	
-		gfxrombo[i] = rombo[i*2] | (rombo[(i*2)+1]<<8);				
-	}
+	// for(i = 0; i < 16 * 16 / 2; i++) 
+	// {	
+	// 	gfxrombo[i] = rombo[i*2] | (rombo[(i*2)+1]<<8);				
+	// }
 	//sprite de 32x32
 	for(i = 0; i < 32 * 32 / 2; i++) 
 	{	
-		gfxromboGrande[i] = romboGrande[i*2] | (romboGrande[(i*2)+1]<<8);	
+		// gfxromboGrande[i] = romboGrande[i*2] | (romboGrande[(i*2)+1]<<8);	
 		
 		// gfxrevesCarta[i] = revesCarta[i*2] | (revesCarta[(i*2)+1]<<8);
 
@@ -632,7 +632,7 @@ int i;
 }
 
 /* Esta función dibuja un rombo en la posición x, y de pantalla. A cada rombo que se quiera mostrar en pantalla se le debe asignar un índice distinto, un valor entre 0 y 126 */
-
+/*
 void MostrarRombo(int indice, int x, int y)
 { 
  
@@ -653,8 +653,9 @@ oamSet(&oamMain, // main graphics engine context
 	  
 oamUpdate(&oamMain);  
 }
-
+*/
 /* Esta función borra de la pantalla el Rombo con el índice indicado */
+/*
 void BorrarRombo(int indice, int x, int y)
 {
 
@@ -718,6 +719,7 @@ oamSet(&oamMain, // main graphics engine context
 oamUpdate(&oamMain); 
 
 }
+*/
 /*
 //reves carta
 void MostrarRevesCarta(int indice, int x, int y)
@@ -2809,7 +2811,7 @@ oamUpdate(&oamMain);
 
 
 
-FuncionCarta funcionesMostrar[52] = {
+FuncionCarta funcionesMostrar[12] = {
     // Picas
     Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// Mostrar5picas,
@@ -2836,7 +2838,7 @@ FuncionCarta funcionesMostrar[52] = {
 };
 
 
-FuncionCarta funcionesBorrar[52] = {
+FuncionCarta funcionesBorrar[12] = {
     // Picas
     Borrar2picas, Borrar3picas, Borrar4picas
 	// , Borrar5picas,
