@@ -6,7 +6,7 @@
 typedef void (*FuncionCarta)(int indice, int x, int y);
 
 // Declaración de los arrays externos
-extern FuncionCarta funcionesMostrar[12];
-extern FuncionCarta funcionesBorrar[12];
+extern FuncionCarta funcionesMostrar[13];
+extern FuncionCarta funcionesBorrar[13];
 
 #endif
