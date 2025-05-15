@@ -125,8 +125,8 @@ void juego()
 	{	
 		touchRead(&pos_pantalla);
 		
-		iprintf("\x1b[2;5Hsuma de jugador =%d           ", cartasJugador);
-		iprintf("\x1b[4;5Hsuma de crupier =%d           ", cartasCrupier);		
+		iprintf("\x1b[2;5Hcontador de jugador =%d           ", contadorJugador);
+		iprintf("\x1b[4;5Hcontador de crupier =%d           ", contadorCrupier);		
 		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta);
 		iprintf("\x1b[10;5HDinero restante=%d           ", dinero);
 		iprintf("\x1b[7;3HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
@@ -274,6 +274,7 @@ void juego()
 			ESTADO = INICIO;
 			construirBaraja(baraja); //barajar cartas y reiniciar
 			shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
+			dinero = dinero + apuesta;
 			vaciarVariables();
 			portada();
 		}
