@@ -227,7 +227,7 @@ void juego()
 					robarCartaCrupier();
 				}
 			
-				for (i = 0; i < contadorCrupier-1; i++){
+				for (i = 0; i < contadorCrupier; i++){
 					mostrarCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
 
 				}
