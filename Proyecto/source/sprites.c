@@ -2825,13 +2825,12 @@ FuncionCarta funcionesMostrar[12] = {
     // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, 
 
 	// Picas
-    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
+    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
     // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, 
 
     // Picas
-    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// ,Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
     // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas
@@ -2852,13 +2851,12 @@ FuncionCarta funcionesBorrar[12] = {
     // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
 
     // Picas
-    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
+    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
     // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
 
     // Picas
-    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
     // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas
