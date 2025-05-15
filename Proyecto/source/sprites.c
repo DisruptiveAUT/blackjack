@@ -2811,21 +2811,19 @@ oamUpdate(&oamMain);
 
 
 
-FuncionCarta funcionesMostrar[12] = {
+FuncionCarta funcionesMostrar[4] = {
     // Picas
-    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
+    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
     // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas,
 
 	// Picas
-    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
     // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, 
 
 	// Picas
-    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas 
 	// Mostrar5picas,
     // Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas,
     // Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, 
@@ -2837,21 +2835,19 @@ FuncionCarta funcionesMostrar[12] = {
 };
 
 
-FuncionCarta funcionesBorrar[12] = {
-    // Picas
-    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
-	// , Borrar5picas,
-    // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
-    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
-
-    // Picas
-    MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas,
-	// , Borrar5picas,
-    // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
-    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
-
+FuncionCarta funcionesBorrar[4] = {
     // Picas
     MostrarApicas, Mostrar2picas, Mostrar3picas, Mostrar4picas
+	// , Borrar5picas,
+    // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
+    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
+
+    // Picas
+	// , Borrar5picas,
+    // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
+    // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
+
+    // Picas
 	// , Borrar5picas,
     // Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas,
     // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, 
@@ -2863,12 +2859,12 @@ FuncionCarta funcionesBorrar[12] = {
 };
 
 void mostrarCarta(struct Carta c, int x, int y) {
-	int id = c.id % 13;
+	int id = c.id % 4;
     funcionesMostrar[id](id, x, y);
 }
 
 void borrarCarta(struct Carta c, int x, int y) {
-	int id = c.id % 13;
+	int id = c.id % 4;
     funcionesBorrar[id](id, x, y);
 }
 
