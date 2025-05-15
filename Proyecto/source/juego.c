@@ -33,7 +33,7 @@ int seg = 0;
 int dinero = 100;
 int apuesta = 0;
 bool crupierMostradas = false;
-
+int segActual = -1;
 bool llamadaCalcularPartida(){
 	return calcularPartida(cartasJugador,cartasCrupier);
 }
@@ -123,6 +123,7 @@ void juego()
 	while(1)
 	{	
 		touchRead(&pos_pantalla);
+		
 		iprintf("\x1b[2;5Hsuma de jugador =%d           ", cartasJugador);
 		iprintf("\x1b[4;5Hsuma de crupier =%d           ", cartasCrupier);		
 		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta);
@@ -142,27 +143,32 @@ void juego()
 
 	}  else if (ESTADO == APOSTAR){
 		seleccionarApuesta();
-			
+			if (seg != segActual )
 			if((pos_pantalla.px >= 15 && pos_pantalla.px <= 47 &&
 				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 1){//boton de anadir 1 ficha
 				apuesta = apuesta + 1;
 				dinero = dinero - 1;
+				segActual = seg;
 			} else if((pos_pantalla.px >= 62 && pos_pantalla.px <= 94 &&
 				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 10){//boton de anadir 10 fichas
 				apuesta = apuesta + 10;
 				dinero = dinero - 10;
+				segActual = seg;
 			} else if((pos_pantalla.px >= 109 && pos_pantalla.px <= 141 &&
 				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 20){//boton de anadir 20 fichas
 				apuesta = apuesta + 20;
 				dinero = dinero - 20;
+				segActual = seg;
 			} else if((pos_pantalla.px >= 156 && pos_pantalla.px <= 188 &&
 				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero >= 50){//boton de anadir 50 fichas
 				apuesta = apuesta + 50;
 				dinero = dinero - 50;
+				segActual = seg;
 			} else if((pos_pantalla.px >= 203 && pos_pantalla.px <= 235 &&
 				pos_pantalla.py >= 100 && pos_pantalla.py <= 132) && dinero != 0){//boton de all in
 				apuesta = apuesta + dinero;
 				dinero = 0;
+				segActual = seg;
 			} 
 		
 		//FINAL CONDICIONAL DE ESTADO APOSTAR
