@@ -2865,11 +2865,13 @@ FuncionCarta funcionesBorrar[12] = {
 };
 
 void mostrarCarta(struct Carta c, int x, int y) {
-    funcionesMostrar[c.id](c.id, x, y);
+	int id = c.id % 13;
+    funcionesMostrar[id](id, x, y);
 }
 
 void borrarCarta(struct Carta c, int x, int y) {
-    funcionesBorrar[c.id](c.id, x, y);
+	int id = c.id % 13;
+    funcionesBorrar[id](id, x, y);
 }
 
 
