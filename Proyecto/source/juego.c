@@ -123,9 +123,11 @@ void juego()
 	while(1)
 	{	
 		touchRead(&pos_pantalla);
-		iprintf("\x1b[11;5HDinero apostado=%d", apuesta);
-		iprintf("\x1b[10;5HDinero restante=%d", dinero);
-		iprintf("\x1b[3;5HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
+		iprintf("\x1b[2;5Hsuma de jugador =%d           ", cartasJugador);
+		iprintf("\x1b[4;5Hsuma de crupier =%d           ", cartasCrupier);		
+		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta);
+		iprintf("\x1b[10;5HDinero restante=%d           ", dinero);
+		iprintf("\x1b[7;5HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
 
 	if (ESTADO == INICIO){
 		portada();
@@ -182,9 +184,8 @@ void juego()
 			}else {
 				cartasJugador = cartasJugador + manoJugador[i].valorNum;
 			}
-			mostrarCartaCrupier(manoJugador[i], i); // poner las primeras dos cartas robadas del jugador en sus espacios
-			iprintf("\x1b[2;5Hsuma de jugador =%d", cartasJugador);
-			iprintf("\x1b[3;5Hsuma de crupier =%d", cartasCrupier);
+			mostrarCartaJugador(manoJugador[i], i); // poner las primeras dos cartas robadas del jugador en sus espacios
+
 		}
 		for (i = 0; i < 2; i++ ){ //las dos cartas obligatorias del crupier
 			manoCrupier[i] = robarCarta( contadorBaraja, baraja);
@@ -227,7 +228,7 @@ void juego()
 			pos_pantalla.py >= 64 && pos_pantalla.py < 96 ) { //pulsa el boton de hit
 			
 			robarCartaJugador();
-			mostrarCartaCrupier(manoJugador[contadorJugador-1], contadorJugador-1);
+			mostrarCartaJugador(manoJugador[contadorJugador -1], contadorJugador -1);
 			
 		}
 			
@@ -238,7 +239,7 @@ void juego()
 			diseno();
 			
 			for (i = 0; i < contadorJugador - 1; i++){
-				mostrarCartaCrupier(manoJugador[i], i);
+				mostrarCartaJugador(manoJugador[i], i);
 			}
 			if(crupierMostradas == true){
 				for (i = 0; i < contadorCrupier - 1; i++){
