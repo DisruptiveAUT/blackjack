@@ -41,6 +41,8 @@ void RutAtencionTempo()
 if (ESTADO!=INICIO)
 {
 	tick++; 
+	swiWaitForVBlank();
+    oamUpdate(&oamMain);
 	if (tick%30 == 0){
 		seg++;
 		

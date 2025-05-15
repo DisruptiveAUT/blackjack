@@ -254,21 +254,23 @@ void juego()
 		}
 			
 	}else if (ESTADO == PAUSA){
-		if (pos_pantalla.px >= 46 && pos_pantalla.px <= 78 &&
-			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de reanudar
+		if (pos_pantalla.px >= 71 && pos_pantalla.px <= 98 &&
+			pos_pantalla.py >= 96 && pos_pantalla.py <= 134){// si se pulsa el boton de reanudar
 			ESTADO = JUGAR;
 			diseno();
-			
-			for (i = 0; i < contadorJugador - 1; i++){
-				mostrarCartaJugador(manoJugador[i], i);
-			}
-			if(crupierMostradas == true){
-				for (i = 0; i < contadorCrupier - 1; i++){
-					mostrarCartaCrupier(manoCrupier[i], i);
+				if (ESTADO == JUGAR){
+					for (i = 0; i < contadorJugador - 1; i++){
+						mostrarCartaJugador(manoJugador[i], i);
 				}
+				if(crupierMostradas == true){
+					for (i = 0; i < contadorCrupier - 1; i++){
+						mostrarCartaCrupier(manoCrupier[i], i);
+					}
 			}
-		}else if (pos_pantalla.px >= 175 && pos_pantalla.px <= 207 &&
-			pos_pantalla.py >= 58 && pos_pantalla.py <= 90){// si se pulsa el boton de finalizar
+			}
+			
+		}else if (pos_pantalla.px >= 152 && pos_pantalla.px <= 190 &&
+			pos_pantalla.py >= 97 && pos_pantalla.py <= 134){// si se pulsa el boton de finalizar
 			ESTADO = INICIO;
 			construirBaraja(baraja); //barajar cartas y reiniciar
 			shuffle(baraja, sizeof(baraja)/sizeof(baraja[0]));
