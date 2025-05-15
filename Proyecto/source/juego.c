@@ -255,6 +255,14 @@ void juego()
 		}
 			
 	}else if (ESTADO == PAUSA){
+			for (i = 0; i < contadorJugador; i++){
+				borrarCartaJugador(manoJugador[i], i);
+			}
+			if(crupierMostradas == true){
+				for (i = 0; i < contadorCrupier; i++){
+					borrarCartaCrupier(manoCrupier[i], i);
+				}
+			}
 		if (pos_pantalla.px >= 71 && pos_pantalla.px <= 98 &&
 			pos_pantalla.py >= 96 && pos_pantalla.py <= 134){// si se pulsa el boton de reanudar
 			ESTADO = JUGAR;
@@ -280,6 +288,14 @@ void juego()
 			portada();
 		}
 	}else if (ESTADO == FIN){
+			for (i = 0; i < contadorJugador; i++){
+				borrarCartaJugador(manoJugador[i], i);
+			}
+			
+			for (i = 0; i < contadorCrupier; i++){
+				borrarCartaCrupier(manoCrupier[i], i);
+			}
+			
 		if (dinero <= 0){
 			partidaPerdida();
 			partidaPerdida();
@@ -296,6 +312,14 @@ void juego()
 			portada();
 		}
 	}else if (ESTADO == GANAR){
+			for (i = 0; i < contadorJugador; i++){
+				borrarCartaJugador(manoJugador[i], i);
+			}
+
+			for (i = 0; i < contadorCrupier; i++){
+				borrarCartaCrupier(manoCrupier[i], i);
+			}
+			
 			victoria();
 			vaciarVariables();
 			if (pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
