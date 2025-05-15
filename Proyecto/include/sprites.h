@@ -172,11 +172,11 @@ extern void Borrar4picas(int indice, int x, int y);
 
 
 //Cinco de picas
-// extern void Mostrar5picas(int indice, int x, int y);
+extern void Mostrar5picas(int indice, int x, int y);
 /* Esta función dibuja un 5 de picas en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar5picas(int indice, int x, int y);
+extern void Borrar5picas(int indice, int x, int y);
 /* Esta función borra de la pantalla el 5 de picas con el índice que se le indique como parámetro */
 
 
@@ -208,11 +208,11 @@ extern void Borrar4picas(int indice, int x, int y);
 
 
 //Seis de picas
-// extern void Mostrar6picas(int indice, int x, int y);
+extern void Mostrar6picas(int indice, int x, int y);
 /* Esta función dibuja un 6 de picas en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar6picas(int indice, int x, int y);
+extern void Borrar6picas(int indice, int x, int y);
 /* Esta función borra de la pantalla el 6 de picas con el índice que se le indique como parámetro */
 
 
