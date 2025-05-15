@@ -10,6 +10,7 @@ rutinasAtencion.h
 extern void RutAtencionTeclado ();
 extern void RutAtencionTempo();
 extern void EstablecerVectorInt();
+extern int devolverSeg();
 
 /***********************2024-2025*******************************/
 

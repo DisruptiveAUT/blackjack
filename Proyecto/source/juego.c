@@ -29,7 +29,7 @@ int cartasJugador = 0;
 int contadorBaraja = 0;
 int contadorCrupier = 0;
 int contadorJugador = 0;
-int seg = 0;
+//int seg = 0;
 int dinero = 100;
 int apuesta = 0;
 bool crupierMostradas = false;
@@ -129,7 +129,9 @@ void juego()
 		iprintf("\x1b[4;5Hsuma de crupier =%d           ", cartasCrupier);		
 		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta);
 		iprintf("\x1b[10;5HDinero restante=%d           ", dinero);
-		iprintf("\x1b[7;5HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
+		iprintf("\x1b[7;3HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
+		iprintf("\x1b[9;5HSeg pero de juego =%d           ", seg);
+		iprintf("\x1b[5;5HSegActual =%d           ", segActual);
 
 	if (ESTADO == INICIO){
 		portada();
@@ -219,7 +221,7 @@ void juego()
 		} 
 
 		if( (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
-			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) || cartasJugador >= 21) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
+			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) || (cartasJugador >= 21 && crupierMostradas == false) ) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
 				crupierMostradas = true;
 				while (cartasCrupier < 17){ //el crupier deja de robar si tiene 17 o mas
 					robarCartaCrupier();
@@ -229,11 +231,16 @@ void juego()
 					mostrarCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
 
 				}
-			if (calcularPartida(cartasJugador, cartasCrupier)){// si se pierde la partida cambiar estado 
+				segActual = devolverSeg();
+			while (devolverSeg() - segActual < 4){
+				//se mantienen en espera 
+			}
+
+			if (calcularPartida(cartasJugador, cartasCrupier) && devolverSeg() - segActual >= 4){// si se pierde la partida cambiar estado 
 				ESTADO = GANAR;
 				dinero = dinero + (2*apuesta); 
 				victoria();
-			}else if(!(calcularPartida(cartasJugador, cartasCrupier))){
+			}else if(!(calcularPartida(cartasJugador, cartasCrupier)) && devolverSeg() - segActual >= 4 ){
 				ESTADO = FIN;
 				partidaPerdida();
 				vaciarVariables();
