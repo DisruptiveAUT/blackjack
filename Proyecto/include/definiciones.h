@@ -48,6 +48,8 @@ touchPosition PANT_DAT;
 
 extern int cartasJugador;
 extern int cartasCrupier;
+extern int seg;
+extern bool tocadoPantalla;
 
 // Nombres asignados a los estados
 #define INICIO 0

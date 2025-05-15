@@ -16,7 +16,7 @@ rutinasAtencion.c
 
 
 int ESTADO; // Para controlar el estado del autómata en que esté
-int seg3;   // Para ver si pasan tres segundos
+int seg;   // Para ver si pasan tres segundos
 
 void RutAtencionTeclado ()
 {
@@ -35,7 +35,7 @@ void RutAtencionTeclado ()
 void RutAtencionTempo()
 {
 	static int tick=0;
-	static int seg=0;
+	seg=0;
 	
 
 if (ESTADO!=INICIO)
@@ -43,6 +43,7 @@ if (ESTADO!=INICIO)
 	tick++; 
 	if (tick%30 == 0){
 		seg++;
+		tocadoPantalla = false;
 		iprintf("\x1b[12;5HSegundos que han pasado=%d", seg);
 		//tick=0;		
 	}
