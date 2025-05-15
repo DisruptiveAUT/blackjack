@@ -221,8 +221,9 @@ void juego()
 		} 
 
 		if( (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
-			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) || (cartasJugador >= 21 && crupierMostradas == false) ) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
+			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) && tocadoPantalla == false || (cartasJugador >= 21 && crupierMostradas == false)  ) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
 				crupierMostradas = true;
+				tocadoPantalla = true; 
 				while (cartasCrupier < 17){ //el crupier deja de robar si tiene 17 o mas
 					robarCartaCrupier();
 				}
@@ -259,11 +260,11 @@ void juego()
 			ESTADO = JUGAR;
 			diseno();
 				if (ESTADO == JUGAR){
-					for (i = 0; i < contadorJugador - 1; i++){
+					for (i = 0; i < contadorJugador; i++){
 						mostrarCartaJugador(manoJugador[i], i);
 				}
 				if(crupierMostradas == true){
-					for (i = 0; i < contadorCrupier - 1; i++){
+					for (i = 0; i < contadorCrupier; i++){
 						mostrarCartaCrupier(manoCrupier[i], i);
 					}
 			}
