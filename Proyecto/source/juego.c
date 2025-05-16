@@ -250,7 +250,12 @@ void juego()
 			pos_pantalla.py >= 64 && pos_pantalla.py < 96 && tocadoPantalla == false ) { //pulsa el boton de hit
 			tocadoPantalla = true; 
 			robarCartaJugador();
-			mostrarCartaJugador(manoJugador[contadorJugador -1], contadorJugador -1);
+			
+			
+				for (i = 0; i < contadorJugador; i++){
+					mostrarCartaJugador(manoJugador[i], i);
+				}
+			
 			
 		}
 			
