@@ -18,23 +18,12 @@ void shuffle(struct Carta mazo[], int n)
 
 void construirBaraja(struct Carta baraja[])
 {
-    // Array de valores
-    const char *valores[] = {
-        "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
-
-    const char *palos[] = {
-        "Corazones", "Diamantes", "Treboles", "Picas"};
-
     int k = 0, i, j;
     for (i = 0; i < 4; i++)
-    { // Palos
-        for (j = 0; j < 13; j++)
-        {                     // Valores
+    {                            // Palos
+        for (j = 0; j < 13; j++) // Valores
+        {
             baraja[k].id = k; // ID único de 0 a 51
-
-            strcpy(baraja[k].valor, valores[j]);
-            strcpy(baraja[k].palo, palos[i]);
-
             // Asignar valorNum
             if (j < 9)
             { // "2" a "10"
@@ -48,7 +37,6 @@ void construirBaraja(struct Carta baraja[])
             { // "A"
                 baraja[k].valorNum = 11;
             }
-
             k++;
         }
     }
