@@ -61,9 +61,7 @@ extern int ESTADO;
 struct Carta
 {
     int id;
-    char palo[20];
-    char valor[5];
-    valorNum;
+    int valorNum;
 };
 #endif
 /***********************2024-2025*******************************/
