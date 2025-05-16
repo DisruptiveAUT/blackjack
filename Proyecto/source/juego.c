@@ -233,9 +233,11 @@ void juego()
 					mostrarCartaJugador(manoJugador[i], i);
 				}
 				segActual = devolverSeg();
+				
 			while (devolverSeg() - segActual < 4){
 				//se mantienen en espera 
 			}
+			
 
 			if (calcularPartida(cartasJugador, cartasCrupier) && devolverSeg() - segActual >= 4){// si se pierde la partida cambiar estado 
 				ESTADO = GANAR;
