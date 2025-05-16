@@ -304,7 +304,11 @@ void juego()
 			}
 			
 		if (dinero <= 0){
-			partidaPerdida();
+			dineroPerdido();
+			segActual = devolverSeg();
+			while (devolverSeg() - segActual < 4){
+				//se mantienen en espera 
+			}
 		
 			dinero = 100;
 			vaciarVariables();
