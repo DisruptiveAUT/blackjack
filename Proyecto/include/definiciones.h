@@ -4,7 +4,7 @@
            definiciones.h
 -------------------------------------*/
 
-#ifndef DEFINICIONES_H;
+#ifndef DEFINICIONES_H; //Control para que no haya mas de una declaracion del struct Carta
 #define DEFINICIONES_H
 #include <nds.h>    // Librería de la nds
 #include <stdio.h>  // Librería de entrada/salida estándar de C
@@ -43,10 +43,10 @@ touchPosition PANT_DAT;
 #define R 8
 #define L 9
 
-extern cartasJugador;
-extern int cartasCrupier;
-// extern int segActual;
-extern bool tocadoPantalla;
+//Variables globales
+extern int cartasJugador; //Numero de cartas del jugador
+extern int cartasCrupier; //Numero de cartas del crupier
+extern bool tocadoPantalla; //Variable de control para que no detecte el click de la pantalla mas de una vez por segundo
 
 // Nombres asignados a los estados
 #define INICIO 0
@@ -60,8 +60,8 @@ extern int ESTADO;
 
 struct Carta
 {
-    int id;
-    int valorNum;
+    int id; //Id para identificar que carta es, esta ligado a dos arrays con sus funciones correspondientes de mostrar y borrar
+    int valorNum; //Valor numerico de cada carta, usado para calcular el ganador de la partida
 };
 #endif
 /***********************2024-2025*******************************/
