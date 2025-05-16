@@ -118,8 +118,8 @@ void juego()
 	while (1)
 	{
 		touchRead(&pos_pantalla); 
-		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta); //muestra en la pantalla superior el dinero apostado
-		iprintf("\x1b[10;5HDinero restante=%d           ", dinero); //muestra en la pantalla superior el dinero restante
+		iprintf("\x1b[11;3HDinero apostado=%d           ", apuesta); //muestra en la pantalla superior el dinero apostado
+		iprintf("\x1b[10;3HDinero restante=%d           ", dinero); //muestra en la pantalla superior el dinero restante
 
 		if (ESTADO == INICIO)
 		{
@@ -129,7 +129,7 @@ void juego()
 				 pos_pantalla.py >= 1 && pos_pantalla.py <= 192) ||
 				TeclaPulsada() == START)
 			{ // si se pulsa START o se le da al boton central
-
+				tocadoPantalla = true;
 				ESTADO = APOSTAR;
 			}
 			// FINAL CONDICIONAL DE ESTADO INICIO
@@ -326,7 +326,8 @@ void juego()
 			else if (pos_pantalla.px >= 152 && pos_pantalla.px <= 190 &&
 					 pos_pantalla.py >= 97 && pos_pantalla.py <= 134)
 			{ // si se pulsa el boton de finalizar
-				ESTADO = INICIO;
+				tocadoPantalla = true;
+				ESTADO = APOSTAR;
 				construirBaraja(baraja); // barajar cartas y reiniciar
 				shuffle(baraja, sizeof(baraja) / sizeof(baraja[0]));
 				dinero = dinero + apuesta;
@@ -363,6 +364,7 @@ void juego()
 			if ((TeclaPulsada() == A) || (pos_pantalla.px >= 1) && (pos_pantalla.px <= 254) &&
 											 (pos_pantalla.py >= 1) && (pos_pantalla.py <= 192))
 			{ // tocar la pantalla o pulsar a
+				tocadoPantalla = true; 
 				ESTADO = APOSTAR;
 				vaciarVariables();
 				portada(); //muestra la pantalla de inicio
@@ -385,6 +387,7 @@ void juego()
 			if (pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
 				pos_pantalla.py >= 1 && pos_pantalla.py <= 192)
 			{ // tocar la pantalla o pulsar a
+				tocadoPantalla = true; 
 				ESTADO = APOSTAR;
 				seleccionarApuesta();
 			}

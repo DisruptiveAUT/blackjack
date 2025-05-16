@@ -47,7 +47,7 @@ void RutAtencionTempo()
 			seg++;
 
 			tocadoPantalla = false;
-			iprintf("\x1b[12;5HSegundos que han pasado=%d", seg);
+			iprintf("\x1b[12;HSegundos que han pasado=%d", seg);
 			// tick=0;
 		}
 		if (ESTADO == JUGAR)
