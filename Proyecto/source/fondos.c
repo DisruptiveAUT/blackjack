@@ -15,6 +15,8 @@
 #include "seleccionarApuesta.h"
 #include "menuPausa.h"
 #include "victoria.h"
+#include "dineroPerdido.h"
+
 
 
 
@@ -70,6 +72,14 @@ void victoria() {
                     victoriaBitmap, // Variable que se genera automáticamente
                      (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
                      victoriaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
+}
+
+void dineroPerdido() {
+		
+    dmaCopyHalfWords(DMA_CHANNEL,
+                    dineroPerdidoBitmap, // Variable que se genera automáticamente
+                     (uint16 *)BG_BMP_RAM(0), // Dirección del fondo principal
+                     dineroPerdidoBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
 /***********************2024-2025*******************************/
