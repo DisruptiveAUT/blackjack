@@ -2870,33 +2870,33 @@ FuncionCarta funcionesBorrar[13] = {
     // Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas
 };
 
-void mostrarCarta(struct Carta c, int x, int y) {
+void mostrarCarta(struct Carta c, int x, int y, int indice) {
 	int id = c.id % 13;
-    funcionesMostrar[id](c.id, x, y);
+    funcionesMostrar[id](indice, x, y);
 }
 
-void borrarCarta(struct Carta c, int x, int y) {
+void borrarCarta(struct Carta c, int x, int y, int indice) {
 	int id = c.id % 13;
-    funcionesBorrar[id](c.id, x, y);
+    funcionesBorrar[id](indice, x, y);
 }
 
 
 void mostrarCartaCrupier(struct Carta x, int manoCrupier){
 	switch(manoCrupier) {
         case 0:
-            mostrarCarta(x, 28, 10);
+            mostrarCarta(x, 28, 10, 10);
             break;
         case 1:
-            mostrarCarta(x, 70, 10);
+            mostrarCarta(x, 70, 10, 11);
             break;
         case 2:
-            mostrarCarta(x, 112, 10);
+            mostrarCarta(x, 112, 10, 12);
             break;
 		case 3:
-			mostrarCarta(x, 154, 10);
+			mostrarCarta(x, 154, 10, 13);
 			break;
 		case 4:
-			mostrarCarta(x, 196, 10);
+			mostrarCarta(x, 196, 10, 14);
 			break;
         default:
             break;
@@ -2905,19 +2905,19 @@ void mostrarCartaCrupier(struct Carta x, int manoCrupier){
 void mostrarCartaJugador(struct Carta x, int manoJugador){
 	switch(manoJugador) {
         case 0:
-			mostrarCarta(x, 28, 134);
+			mostrarCarta(x, 28, 134, 0);
             break;
         case 1:
-			mostrarCarta(x, 70, 134);
+			mostrarCarta(x, 70, 134, 1);
             break;
         case 2:
-			mostrarCarta(x, 112, 134);
+			mostrarCarta(x, 112, 134, 2);
             break;
 		case 3:
-			mostrarCarta(x, 154, 134);
+			mostrarCarta(x, 154, 134, 3);
 			break;
 		case 4:
-			mostrarCarta(x, 196, 134);
+			mostrarCarta(x, 196, 134, 4);
 			break;
         default:
             break;
@@ -2928,19 +2928,19 @@ void mostrarCartaJugador(struct Carta x, int manoJugador){
 void borrarCartaCrupier(struct Carta x, int manoCrupier){
 	switch(manoCrupier) {
 		case 0:
-			borrarCarta(x, 28, 10);
+			borrarCarta(x, 28, 10, 10);
 			break;
 		case 1:
-			borrarCarta(x, 70, 10);
+			borrarCarta(x, 70, 10, 11);
 			break;
 		case 2:
-			borrarCarta(x, 112, 10);
+			borrarCarta(x, 112, 10, 12);
 			break;
 		case 3:
-			borrarCarta(x, 154, 10);
+			borrarCarta(x, 154, 10, 13);
 			break;
 		case 4:
-			borrarCarta(x, 196, 10);
+			borrarCarta(x, 196, 10, 14);
 			break;
 		default:
 			break;
@@ -2950,19 +2950,19 @@ void borrarCartaCrupier(struct Carta x, int manoCrupier){
 void borrarCartaJugador(struct Carta x, int manoJugador){
 	switch(manoJugador) {
 		case 0:
-			borrarCarta(x, 28, 134);
+			borrarCarta(x, 28, 134, 0);
 			break;
 		case 1:
-			borrarCarta(x, 70, 134);
+			borrarCarta(x, 70, 134, 1);
 			break;
 		case 2:
-			borrarCarta(x, 112, 134);
+			borrarCarta(x, 112, 134, 2);
 			break;
 		case 3:
-			borrarCarta(x, 154, 134);
+			borrarCarta(x, 154, 134, 3);
 			break;
 		case 4:
-			borrarCarta(x, 196, 134);
+			borrarCarta(x, 196, 134, 4);
 			break;
 		default:
 			break;
