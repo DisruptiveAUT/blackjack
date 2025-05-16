@@ -84,9 +84,6 @@ void memoriaReserva()
 void EstablecerPaletaPrincipal() {
 	
 	SPRITE_PALETTE[0] = RGB15(0,0,0); // los píxeles con valor 0 serán de color negro.
-	SPRITE_PALETTE[1] = RGB15(31,0,0); // los píxeles con valor 1 serán de color rojo.
-	SPRITE_PALETTE[2] = RGB15(0,31,0); // los píxeles con valor 2 serán verdes.
-	SPRITE_PALETTE[3] = RGB15(0,0,31); // los píxeles con valor 3 serán azules.
 	SPRITE_PALETTE[4] = RGB15(31,31,31); // los píxeles con el valor 4 serán blancos.
 }
 
