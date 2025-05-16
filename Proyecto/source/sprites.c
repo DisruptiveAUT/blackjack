@@ -2920,56 +2920,44 @@ void mostrarCartaJugador(struct Carta x, int manoJugador){
 }
 
 
-void borrarCartaCrupier(struct Carta cartas[]){
-	int i;
-	for (i = 0; i < 10; i++) {
-        if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
-            break;
-        }
-		switch(i) {
-			case 0:
-				borrarCarta(cartas[i], 28, 10);
-				break;
-			case 1:
-				borrarCarta(cartas[i], 70, 10);
-				break;
-			case 2:
-				borrarCarta(cartas[i], 112, 10);
-				break;
-			case 3:
-				borrarCarta(cartas[i], 154, 10);
-				break;
-			case 4:
-				borrarCarta(cartas[i], 196, 10);
-			default:
-				break;
-		}
-    }
+void borrarCartaCrupier(struct Carta x, int manoCrupier){
+	switch(manoCrupier) {
+		case 0:
+			borrarCarta(x, 28, 10);
+			break;
+		case 1:
+			borrarCarta(x, 70, 10);
+			break;
+		case 2:
+			borrarCarta(x, 112, 10);
+			break;
+		case 3:
+			borrarCarta(x, 154, 10);
+			break;
+		case 4:
+			borrarCarta(x, 196, 10);
+		default:
+			break;
+	}
 }
 
-void borrarCartaJugador(struct Carta cartas[]){
-	int i;
-	for ( i = 0; i < 10; i++) {
-        if (cartas[i].id == 0 && cartas[i].palo[0] == '\0') {
-            break;
-        }
-		switch(i) {
-			case 0:
-				borrarCarta(cartas[i], 28, 134);
-				break;
-			case 1:
-				borrarCarta(cartas[i], 70, 134);
-				break;
-			case 2:
-				borrarCarta(cartas[i], 112, 134);
-				break;
-			case 3:
-				borrarCarta(cartas[i], 154, 134);
-				break;
-			case 4:
-				borrarCarta(cartas[i], 196, 134);
-			default:
-				break;
-		}
-    }
+void borrarCartaJugador(struct Carta x, int manoJugador){
+	switch(manoJugador) {
+		case 0:
+			borrarCarta(x, 28, 134);
+			break;
+		case 1:
+			borrarCarta(x, 70, 134);
+			break;
+		case 2:
+			borrarCarta(x, 112, 134);
+			break;
+		case 3:
+			borrarCarta(x, 154, 134);
+			break;
+		case 4:
+			borrarCarta(x, 196, 134);
+		default:
+			break;
+	}
 }
