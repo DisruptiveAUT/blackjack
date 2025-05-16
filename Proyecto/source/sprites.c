@@ -2831,7 +2831,7 @@ oamUpdate(&oamMain);
 
 FuncionCarta funcionesMostrar[13] = {
     // Picas
-    MostrarApicas,Mostrar2picas, Mostrar3picas, Mostrar4picas, Mostrar5picas, Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas, Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas,
+    Mostrar2picas, Mostrar3picas, Mostrar4picas, Mostrar5picas, Mostrar6picas, Mostrar7picas, Mostrar8picas, Mostrar9picas, Mostrar10picas, MostrarJpicas, MostrarQpicas, MostrarKpicas, MostrarApicas
 
 	// Corazones
 	// MostrarAcorazones, Mostrar2corazones, Mostrar3corazones, Mostrar4corazones, Mostrar5corazones,
@@ -2852,7 +2852,7 @@ FuncionCarta funcionesMostrar[13] = {
 
 FuncionCarta funcionesBorrar[13] = {
     // Picas
-	BorrarApicas,Borrar2picas, Borrar3picas, Borrar4picas, Borrar5picas, Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas, Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas,
+	Borrar2picas, Borrar3picas, Borrar4picas, Borrar5picas, Borrar6picas, Borrar7picas, Borrar8picas, Borrar9picas, Borrar10picas, BorrarJpicas, BorrarQpicas, BorrarKpicas, BorrarApicas
 
 	// Corazones
 	// BorrarAcorazones, Borrar2corazones, Borrar3corazones, Borrar4corazones, Borrar5corazones,
