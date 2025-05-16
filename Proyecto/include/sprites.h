@@ -25,9 +25,6 @@ extern void GuardarSpritesMemoria();
 // extern void MostrarRomboGrande(int indice, int x, int y);
 /* Esta función dibuja un rombo grande en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
-// extern void MostrarRevesCarta(int indice, int x, int y);
-/* Esta función borra de la pantalla el rombo grande con el índice que se le indique como parámetro */
-
 // Dos de picas
 extern void Mostrar2picas(int indice, int x, int y);
 /* Esta función dibuja un 2 de picas en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
