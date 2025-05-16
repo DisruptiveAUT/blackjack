@@ -10,6 +10,7 @@
 struct Carta robarCarta(int cont, struct Carta x[]){
     cont ++;
     return x[cont];
+    
 }
 
 /*bool calcularPartida(int valorJugador, int valorCrupier){
