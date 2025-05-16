@@ -26,7 +26,7 @@ void RutAtencionTeclado ()
 		diseno();
 
 	}
-	if (TeclaPulsada() == SELECT){
+	if (TeclaPulsada() == SELECT && ESTADO == JUGAR){
 		ESTADO = PAUSA;
 		menuPausa();
 	}
