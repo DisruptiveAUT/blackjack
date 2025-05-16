@@ -120,7 +120,6 @@ void juego()
 		touchRead(&pos_pantalla); 
 		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta); //muestra en la pantalla superior el dinero apostado
 		iprintf("\x1b[10;5HDinero restante=%d           ", dinero); //muestra en la pantalla superior el dinero restante
-		iprintf("\x1b[9;5HSeg pero de juego =%d           ", seg); //muestra en la pantalla superior el tiempo de juego
 
 		if (ESTADO == INICIO)
 		{
