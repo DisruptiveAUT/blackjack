@@ -129,7 +129,7 @@ void juego()
 		iprintf("\x1b[4;5Hcontador de crupier =%d           ", contadorCrupier);		
 		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta);
 		iprintf("\x1b[10;5HDinero restante=%d           ", dinero);
-		iprintf("\x1b[7;3Hsuma de jugador y crupier: %d e y: %d", manoJugador, manoCrupier);
+		iprintf("\x1b[7;3HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
 		iprintf("\x1b[9;5HSeg pero de juego =%d           ", seg);
 		iprintf("\x1b[5;5HSegActual =%d           ", segActual);
 
