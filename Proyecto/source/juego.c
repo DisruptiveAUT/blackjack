@@ -217,8 +217,8 @@ void juego()
 
 		} 
 
-		if( (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
-			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) && tocadoPantalla == false || (cartasJugador >= 21 && crupierMostradas == false) || contadorJugador >= 6 ) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
+		if(( (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
+			pos_pantalla.py >= 96 && pos_pantalla.py <= 128 ) && tocadoPantalla == false || (cartasJugador >= 21 && crupierMostradas == false)) || contadorJugador >= 6 ) { //si se decide ya jugar pulsando el boton stay o el jugador ya ha superado 21
 				crupierMostradas = true;
 				tocadoPantalla = true; 
 				while (cartasCrupier < 17){ //el crupier deja de robar si tiene 17 o mas
@@ -228,6 +228,9 @@ void juego()
 				for (i = 0; i < contadorCrupier; i++){
 					mostrarCartaCrupier(manoCrupier[i], i); //muestra todas a la vez
 
+				}
+				for (i = 0; i < contadorJugador; i++){
+					mostrarCartaJugador(manoJugador[i], i);
 				}
 				segActual = devolverSeg();
 			while (devolverSeg() - segActual < 4){
@@ -241,7 +244,7 @@ void juego()
 			}else if(!(calcularPartida(cartasJugador, cartasCrupier)) && devolverSeg() - segActual >= 4 ){
 				ESTADO = FIN;
 				partidaPerdida();
-				vaciarVariables();
+				//vaciarVariables();
 			}
 		}else if (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
 			pos_pantalla.py >= 64 && pos_pantalla.py < 96 && tocadoPantalla == false ) { //pulsa el boton de hit
