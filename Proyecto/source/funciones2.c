@@ -12,35 +12,7 @@ struct Carta robarCarta(int cont, struct Carta x[])
     return x[cont];
 }
 
-/*bool calcularPartida(int valorJugador, int valorCrupier){
-
-    if(valorJugador > 21){
-        if (valorCrupier > 21){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-    else if(valorJugador == 21){
-        return true;
-    }
-    else if(valorJugador < 21)
-        if (valorCrupier < 21){
-            if (valorCrupier > valorJugador){
-                return false;
-            }
-        }
-        else if(valorCrupier == 21){
-            return false;
-        }
-        else if(valorCrupier > 21){
-            return true;
-        }
-
-}*/
-
-bool calcularPartida(int valorJugador, int valorCrupier)
+bool calcularPartida(int valorJugador, int valorCrupier) //calcula el ganador de la partida dependiendo de los valores de las las cartas en cada mano
 {
     if (valorJugador > 21)
     {

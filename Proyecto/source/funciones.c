@@ -4,7 +4,7 @@
 #include <string.h>
 #include "definiciones.h"
 
-void shuffle(struct Carta mazo[], int n)
+void shuffle(struct Carta mazo[], int n) //ordena las cartas de la baraja de manera aleatoria
 {
     int i;
     for (i = n - 1; i > 0; i--)
@@ -16,7 +16,7 @@ void shuffle(struct Carta mazo[], int n)
     }
 }
 
-void construirBaraja(struct Carta baraja[])
+void construirBaraja(struct Carta baraja[]) //Construye la baraja de cartas
 {
     int k = 0, i, j;
     for (i = 0; i < 4; i++)

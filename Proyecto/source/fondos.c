@@ -22,7 +22,7 @@ static const int DMA_CHANNEL = 3;
 
 /* Para cada fondo que se quiera visualizar hay que escribir un procedimiento como el siguiente */
 
-void diseno()
+void diseno() // Esta función dibuja el fondo de la pantalla de juego
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
@@ -31,7 +31,7 @@ void diseno()
                      disenoBitmapLen);        // Longitud en bytes, variable que se genera automáticamente
 }
 
-void partidaPerdida()
+void partidaPerdida() // Esta función dibuja el fondo de la pantalla de cuando se pierde el dinero apostado
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
@@ -40,7 +40,7 @@ void partidaPerdida()
                      partidaPerdidaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
-void portada()
+void portada() // Esta función dibuja el fondo de la pantalla de inicio
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
@@ -49,7 +49,7 @@ void portada()
                      portadaBitmapLen);       // Longitud en bytes, variable que se genera automáticamente
 }
 
-void seleccionarApuesta()
+void seleccionarApuesta() // Esta función dibuja el fondo de la pantalla de selección de apuesta
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
@@ -58,7 +58,7 @@ void seleccionarApuesta()
                      seleccionarApuestaBitmapLen); // Longitud en bytes, variable que se genera automáticamente
 }
 
-void menuPausa()
+void menuPausa() // Esta función dibuja el fondo de la pantalla de pausa
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
@@ -67,7 +67,7 @@ void menuPausa()
                      menuPausaBitmapLen);     // Longitud en bytes, variable que se genera automáticamente
 }
 
-void victoria()
+void victoria() // Esta función dibuja el fondo de la pantalla de victoria
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
@@ -76,7 +76,7 @@ void victoria()
                      victoriaBitmapLen);      // Longitud en bytes, variable que se genera automáticamente
 }
 
-void dineroPerdido()
+void dineroPerdido() // Esta función dibuja el fondo de la pantalla que sale cuando pierdes todo el dinero
 {
 
     dmaCopyHalfWords(DMA_CHANNEL,
