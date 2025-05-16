@@ -175,12 +175,7 @@ void juego()
 				tocadoPantalla = true;
 			} 
 		}
-		
-			//if (tocadoPantalla == true){
-			
-			//}
-			
-		
+
 		//FINAL CONDICIONAL DE ESTADO APOSTAR
 	} else if (ESTADO == JUGAR){
 		diseno();
@@ -334,10 +329,6 @@ void juego()
 	// Inhibir las interrupciones al final
 	} //FINAL WHILE PRINCIPAL 
 }
-
-
-
-
 /***********************2024-2025*******************************/
 
 
