@@ -117,21 +117,14 @@ void juego()
 
 	while (1)
 	{
-		touchRead(&pos_pantalla);
-
-		iprintf("\x1b[2;5Hcontador de jugador =%d           ", contadorJugador);
-		iprintf("\x1b[4;5Hcontador de crupier =%d           ", contadorCrupier);
-		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta);
-		iprintf("\x1b[10;5HDinero restante=%d           ", dinero);
-		iprintf("\x1b[7;3HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
-		iprintf("\x1b[9;5HSeg pero de juego =%d           ", seg);
-		iprintf("\x1b[5;5HSegActual =%d           ", segActual);
-		iprintf("\x1b[13;5HSuma de jugador=%d           ", cartasJugador);
-		iprintf("\x1b[14;5HSuma de crupier=%d           ", cartasCrupier);
+		touchRead(&pos_pantalla); 
+		iprintf("\x1b[11;5HDinero apostado=%d           ", apuesta); //muestra en la pantalla superior el dinero apostado
+		iprintf("\x1b[10;5HDinero restante=%d           ", dinero); //muestra en la pantalla superior el dinero restante
+		iprintf("\x1b[9;5HSeg pero de juego =%d           ", seg); //muestra en la pantalla superior el tiempo de juego
 
 		if (ESTADO == INICIO)
 		{
-			portada();
+			portada(); //muestra la pantalla de inicio
 
 			if ((pos_pantalla.px >= 1 && pos_pantalla.px <= 256 &&
 				 pos_pantalla.py >= 1 && pos_pantalla.py <= 192) ||
@@ -145,7 +138,7 @@ void juego()
 		else if (ESTADO == APOSTAR)
 		{
 
-			seleccionarApuesta();
+			seleccionarApuesta(); //pasa a la pantalla de apuesta
 			if (pos_pantalla.px != 0 && tocadoPantalla == false)
 			{
 				if ((pos_pantalla.px >= 15 && pos_pantalla.px <= 47 &&
@@ -194,7 +187,7 @@ void juego()
 		}
 		else if (ESTADO == JUGAR)
 		{
-			diseno();
+			diseno(); //muestra la pantalla de juego
 			if (contadorBaraja < 4)
 			{
 
@@ -280,7 +273,7 @@ void juego()
 				else if (!(calcularPartida(cartasJugador, cartasCrupier)) && devolverSeg() - segActual >= 4)
 				{
 					ESTADO = FIN;
-					partidaPerdida();
+					partidaPerdida(); //muestra la pantalla de que has perdido el dinero que has apostado
 					// vaciarVariables();
 				}
 			}
@@ -300,12 +293,14 @@ void juego()
 		{
 			for (i = 0; i < contadorJugador; i++)
 			{
+				// si se pasa a pausa se borran las cartas del jugador de la pantalla 
 				borrarCartaJugador(manoJugador[i], i);
 			}
 			if (crupierMostradas == true)
 			{
 				for (i = 0; i < contadorCrupier; i++)
 				{
+					// si se pasa a pausa se borran las cartas del crupier de la pantalla
 					borrarCartaCrupier(manoCrupier[i], i);
 				}
 			}
@@ -313,7 +308,7 @@ void juego()
 				pos_pantalla.py >= 96 && pos_pantalla.py <= 134)
 			{ // si se pulsa el boton de reanudar
 				ESTADO = JUGAR;
-				diseno();
+				diseno(); //muestra la pantalla de juego
 				if (ESTADO == JUGAR)
 				{
 					for (i = 0; i < contadorJugador; i++)
@@ -337,17 +332,17 @@ void juego()
 				shuffle(baraja, sizeof(baraja) / sizeof(baraja[0]));
 				dinero = dinero + apuesta;
 				vaciarVariables();
-				portada();
+				portada(); //muestra la pantalla de inicio
 			}
 		}
 		else if (ESTADO == FIN)
 		{
-			for (i = 0; i < contadorJugador; i++)
+			for (i = 0; i < contadorJugador; i++) //borra de la pantalla las cartas del jugador
 			{
 				borrarCartaJugador(manoJugador[i], i);
 			}
 
-			for (i = 0; i < contadorCrupier; i++)
+			for (i = 0; i < contadorCrupier; i++) //borra de la pantalla las cartas del crupier
 			{
 				borrarCartaCrupier(manoCrupier[i], i);
 			}
@@ -371,17 +366,17 @@ void juego()
 			{ // tocar la pantalla o pulsar a
 				ESTADO = APOSTAR;
 				vaciarVariables();
-				portada();
+				portada(); //muestra la pantalla de inicio
 			}
 		}
 		else if (ESTADO == GANAR)
 		{
-			for (i = 0; i < contadorJugador; i++)
+			for (i = 0; i < contadorJugador; i++) //borra de la pantalla las cartas del jugador
 			{
 				borrarCartaJugador(manoJugador[i], i);
 			}
 
-			for (i = 0; i < contadorCrupier; i++)
+			for (i = 0; i < contadorCrupier; i++) //borra de la pantalla las cartas del crupier
 			{
 				borrarCartaCrupier(manoCrupier[i], i);
 			}
