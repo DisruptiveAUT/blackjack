@@ -132,6 +132,8 @@ void juego()
 		iprintf("\x1b[7;3HEstas tocando los pixeles x: %d e y: %d", pos_pantalla.px, pos_pantalla.py);
 		iprintf("\x1b[9;5HSeg pero de juego =%d           ", seg);
 		iprintf("\x1b[5;5HSegActual =%d           ", segActual);
+		iprintf("\x1b[13;5HSuma de jugador=%d           ", cartasJugador);
+		iprintf("\x1b[14;5HSuma de crupier=%d           ", cartasCrupier);
 
 	if (ESTADO == INICIO){
 		portada();
