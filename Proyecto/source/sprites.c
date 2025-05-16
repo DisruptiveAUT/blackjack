@@ -2897,6 +2897,7 @@ void mostrarCartaCrupier(struct Carta x, int manoCrupier){
 			break;
 		case 4:
 			mostrarCarta(x, 196, 10);
+			break;
         default:
             break;
     }
@@ -2917,6 +2918,7 @@ void mostrarCartaJugador(struct Carta x, int manoJugador){
 			break;
 		case 4:
 			mostrarCarta(x, 196, 134);
+			break;
         default:
             break;
     }
@@ -2939,6 +2941,7 @@ void borrarCartaCrupier(struct Carta x, int manoCrupier){
 			break;
 		case 4:
 			borrarCarta(x, 196, 10);
+			break;
 		default:
 			break;
 	}
@@ -2960,6 +2963,7 @@ void borrarCartaJugador(struct Carta x, int manoJugador){
 			break;
 		case 4:
 			borrarCarta(x, 196, 134);
+			break;
 		default:
 			break;
 	}
