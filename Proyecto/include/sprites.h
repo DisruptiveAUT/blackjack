@@ -74,10 +74,10 @@ extern void Borrar2picas(int indice, int x, int y);
 
 
 //Dos de corazones
-// extern void Mostrar2corazones(int indice, int x, int y);
+extern void Mostrar2corazones(int indice, int x, int y);
 /* Esta función dibuja un 2 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
-// extern void Borrar2corazones(int indice, int x, int y);
+extern void Borrar2corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 2 de corazones con el índice que se le indique como parámetro */
 
 
@@ -109,11 +109,11 @@ extern void Borrar3picas(int indice, int x, int y);
 
 
 //Tres de corazones
-// extern void Mostrar3corazones(int indice, int x, int y);
+extern void Mostrar3corazones(int indice, int x, int y);
 /* Esta función dibuja un 3 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar3corazones(int indice, int x, int y);
+extern void Borrar3corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 3 de corazones con el índice que se le indique como parámetro */
 
 
@@ -145,11 +145,11 @@ extern void Borrar4picas(int indice, int x, int y);
 
 
 //Cuatro de corazones
-// extern void Mostrar4corazones(int indice, int x, int y);
+extern void Mostrar4corazones(int indice, int x, int y);
 /* Esta función dibuja un 4 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar4corazones(int indice, int x, int y);
+extern void Borrar4corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 4 de corazones con el índice que se le indique como parámetro */
 
 
@@ -181,11 +181,11 @@ extern void Borrar5picas(int indice, int x, int y);
 
 
 //Cinco de corazones
-// extern void Mostrar5corazones(int indice, int x, int y);
+extern void Mostrar5corazones(int indice, int x, int y);
 /* Esta función dibuja un 5 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar5corazones(int indice, int x, int y);
+extern void Borrar5corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 5 de corazones con el índice que se le indique como parámetro */
 
 
@@ -217,10 +217,10 @@ extern void Borrar6picas(int indice, int x, int y);
 
 
 //Seis de corazones
-// extern void Mostrar6corazones(int indice, int x, int y);
+extern void Mostrar6corazones(int indice, int x, int y);
 /* Esta función dibuja un 6 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
-/*
+
 extern void Borrar6corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 6 de corazones con el índice que se le indique como parámetro */
 
@@ -253,11 +253,11 @@ extern void Borrar7picas(int indice, int x, int y);
 
 
 //Siete de corazones
-// extern void Mostrar7corazones(int indice, int x, int y);
+extern void Mostrar7corazones(int indice, int x, int y);
 /* Esta función dibuja un 7 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar7corazones(int indice, int x, int y);
+extern void Borrar7corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 7 de corazones con el índice que se le indique como parámetro */
 
 
@@ -289,11 +289,11 @@ extern void Borrar8picas(int indice, int x, int y);
 
 
 //Ocho de corazones
-// extern void Mostrar8corazones(int indice, int x, int y);
+extern void Mostrar8corazones(int indice, int x, int y);
 /* Esta función dibuja un 8 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar8corazones(int indice, int x, int y);
+extern void Borrar8corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 8 de corazones con el índice que se le indique como parámetro */
 
 
@@ -325,11 +325,11 @@ extern void Borrar9picas(int indice, int x, int y);
 
 
 //Nueve de corazones
-// extern void Mostrar9corazones(int indice, int x, int y);
+extern void Mostrar9corazones(int indice, int x, int y);
 /* Esta función dibuja un 9 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar9corazones(int indice, int x, int y);
+extern void Borrar9corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 9 de corazones con el índice que se le indique como parámetro */
 
 
@@ -361,11 +361,11 @@ extern void Borrar10picas(int indice, int x, int y);
 
 
 //Diez de corazones
-// extern void Mostrar10corazones(int indice, int x, int y);
+extern void Mostrar10corazones(int indice, int x, int y);
 /* Esta función dibuja un 10 de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void Borrar10corazones(int indice, int x, int y);
+extern void Borrar10corazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el 10 de corazones con el índice que se le indique como parámetro */
 
 
@@ -397,11 +397,11 @@ extern void BorrarJpicas(int indice, int x, int y);
 
 
 //J de corazones
-// extern void MostrarJcorazones(int indice, int x, int y);
+extern void MostrarJcorazones(int indice, int x, int y);
 /* Esta función dibuja un J de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void BorrarJcorazones(int indice, int x, int y);
+extern void BorrarJcorazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el J de corazones con el índice que se le indique como parámetro */
 
 
@@ -433,11 +433,11 @@ extern void BorrarQpicas(int indice, int x, int y);
 
 
 //Reina de corazones
-// extern void MostrarQcorazones(int indice, int x, int y);
+extern void MostrarQcorazones(int indice, int x, int y);
 /* Esta función dibuja un Q de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void BorrarQcorazones(int indice, int x, int y);
+extern void BorrarQcorazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el Q de corazones con el índice que se le indique como parámetro */
 
 
@@ -469,11 +469,11 @@ extern void BorrarKpicas(int indice, int x, int y);
 
 
 //Rey de corazones
-// extern void MostrarKcorazones(int indice, int x, int y);
+extern void MostrarKcorazones(int indice, int x, int y);
 /* Esta función dibuja un K de corazones en la posición de pantalla x,y. A cada rombo que queramos sacar en pantalla se le debe asignar un índice distinto que puede tomara valores entre 0 y 126 */
 
 
-// extern void BorrarKcorazones(int indice, int x, int y);
+extern void BorrarKcorazones(int indice, int x, int y);
 /* Esta función borra de la pantalla el K de corazones con el índice que se le indique como parámetro */
 
 
