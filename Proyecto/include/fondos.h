@@ -14,6 +14,4 @@ extern void menuPausa();
 extern void victoria();
 extern void dineroPerdido();
 
-
 /***********************2024-2025*******************************/
-

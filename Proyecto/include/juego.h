@@ -27,6 +27,4 @@ extern struct Carta manoJugadorLimpio[5];
 extern struct Carta manoCrupierLimpio[5];
 extern struct Carta baraja[52];
 
-
 /***********************2024-2025*******************************/
-

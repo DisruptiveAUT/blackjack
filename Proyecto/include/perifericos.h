@@ -16,5 +16,3 @@ extern void PonerEnMarchaTempo();
 extern void PararTempo();
 
 /***********************2024-2025*******************************/
-
-
