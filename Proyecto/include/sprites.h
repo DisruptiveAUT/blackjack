@@ -110,7 +110,9 @@ extern void BorrarKpicas(int indice, int x, int y);
 /* Esta función borra de la pantalla el K de picas con el índice que se le indique como parámetro */
 
 extern void mostrarCartaCrupier(struct Carta x, int manoCrupier);
+//Funcion para mostrar las cartas del crupier
 
 extern void mostrarCartaJugador(struct Carta x, int manoJugador);
+//Funcion para mostrar las cartas del jugador
 
 /***********************2024-2025*******************************/
