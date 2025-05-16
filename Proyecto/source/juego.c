@@ -244,8 +244,8 @@ void juego()
 				vaciarVariables();
 			}
 		}else if (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
-			pos_pantalla.py >= 64 && pos_pantalla.py < 96 ) { //pulsa el boton de hit
-			
+			pos_pantalla.py >= 64 && pos_pantalla.py < 96 && tocadoPantalla == false ) { //pulsa el boton de hit
+			tocadoPantalla = true; 
 			robarCartaJugador();
 			mostrarCartaJugador(manoJugador[contadorJugador -1], contadorJugador -1);
 			
