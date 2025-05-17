@@ -68,15 +68,7 @@ void RutAtencionTempo()
 				seg = 0;
 			}
 		}
-		else if (ESTADO == GANAR)
-		{
-			if (seg == 10)
-			{
-				ESTADO = APOSTAR;
-				seleccionarApuesta();
-				seg = 0;
-			}
-		}
+		
 	}
 }
 int devolverSeg()

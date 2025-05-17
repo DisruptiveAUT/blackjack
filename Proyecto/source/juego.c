@@ -268,12 +268,15 @@ void juego()
 					ESTADO = GANAR;
 					dinero = dinero + (2 * apuesta);
 					victoria();
+					
+					
 				}
 				else if (!(calcularPartida(cartasJugador, cartasCrupier)) && devolverSeg() - segActual >= 4)
 				{
 					ESTADO = FIN;
 					partidaPerdida(); //muestra la pantalla de que has perdido el dinero que has apostado
 					// vaciarVariables();
+					
 				}
 			}
 			else if (pos_pantalla.px >= 198 && pos_pantalla.px <= 246 &&
@@ -361,8 +364,10 @@ void juego()
 				portada();
 				ESTADO = INICIO;
 			}
-			if ((TeclaPulsada() == A) || (pos_pantalla.px >= 1) && (pos_pantalla.px <= 254) &&
-											 (pos_pantalla.py >= 1) && (pos_pantalla.py <= 192))
+
+
+			if ((TeclaPulsada() == A) || ((pos_pantalla.px >= 1) && (pos_pantalla.px <= 254) &&
+											 (pos_pantalla.py >= 1) && (pos_pantalla.py <= 192) ) )
 			{ // tocar la pantalla o pulsar a
 				tocadoPantalla = true; 
 				ESTADO = APOSTAR;
@@ -384,13 +389,16 @@ void juego()
 
 			victoria();
 			vaciarVariables();
-			if (pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
-				pos_pantalla.py >= 1 && pos_pantalla.py <= 192)
+		
+			
+			if ((pos_pantalla.px >= 1 && pos_pantalla.px <= 254 &&
+				pos_pantalla.py >= 1 && pos_pantalla.py <= 192) )
 			{ // tocar la pantalla o pulsar a
 				tocadoPantalla = true; 
 				ESTADO = APOSTAR;
 				seleccionarApuesta();
 			}
+			
 		}
 
 		// DeshabilitarInterrrupciones();
