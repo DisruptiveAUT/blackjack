@@ -49,8 +49,13 @@ fondos.o: /home/user/Desktop/Proyecto/source/fondos.c \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
   /home/user/Desktop/Proyecto/include/fondos.h \
   /home/user/Desktop/Proyecto/include/graficos.h \
-  /home/user/Desktop/Proyecto/build/Puerta.h \
-  /home/user/Desktop/Proyecto/build/PuertaAbierta.h
+  /home/user/Desktop/Proyecto/build/diseno.h \
+  /home/user/Desktop/Proyecto/build/partidaPerdida.h \
+  /home/user/Desktop/Proyecto/build/portada.h \
+  /home/user/Desktop/Proyecto/build/seleccionarApuesta.h \
+  /home/user/Desktop/Proyecto/build/menuPausa.h \
+  /home/user/Desktop/Proyecto/build/victoria.h \
+  /home/user/Desktop/Proyecto/build/dineroPerdido.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -152,6 +157,16 @@ fondos.o: /home/user/Desktop/Proyecto/source/fondos.c \
 
 /home/user/Desktop/Proyecto/include/graficos.h:
 
-/home/user/Desktop/Proyecto/build/Puerta.h:
+/home/user/Desktop/Proyecto/build/diseno.h:
 
-/home/user/Desktop/Proyecto/build/PuertaAbierta.h:
+/home/user/Desktop/Proyecto/build/partidaPerdida.h:
+
+/home/user/Desktop/Proyecto/build/portada.h:
+
+/home/user/Desktop/Proyecto/build/seleccionarApuesta.h:
+
+/home/user/Desktop/Proyecto/build/menuPausa.h:
+
+/home/user/Desktop/Proyecto/build/victoria.h:
+
+/home/user/Desktop/Proyecto/build/dineroPerdido.h:

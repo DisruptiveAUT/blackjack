@@ -1,0 +1,1 @@
+dineroPerdido.o: dineroPerdido.s

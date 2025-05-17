@@ -1,4 +1,4 @@
-rutinasAtencion.o: /home/user/Desktop/Proyecto/source/rutinasAtencion.c \
+funciones2.o: /home/user/Desktop/Proyecto/source/funciones2.c \
   /opt/devkitPro/libnds/include/nds.h \
   /opt/devkitPro/libnds/include/nds/libversion.h \
   /opt/devkitPro/libnds/include/nds/ndstypes.h \
@@ -51,10 +51,7 @@ rutinasAtencion.o: /home/user/Desktop/Proyecto/source/rutinasAtencion.c \
   /home/user/Desktop/Proyecto/include/perifericos.h \
   /home/user/Desktop/Proyecto/include/fondos.h \
   /home/user/Desktop/Proyecto/include/sprites.h \
-  /home/user/Desktop/Proyecto/include/definiciones.h \
-  /home/user/Desktop/Proyecto/include/funciones.h \
-  /home/user/Desktop/Proyecto/include/funciones2.h \
-  /home/user/Desktop/Proyecto/include/juego.h
+  /home/user/Desktop/Proyecto/include/definiciones.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -161,9 +158,3 @@ rutinasAtencion.o: /home/user/Desktop/Proyecto/source/rutinasAtencion.c \
 /home/user/Desktop/Proyecto/include/sprites.h:
 
 /home/user/Desktop/Proyecto/include/definiciones.h:
-
-/home/user/Desktop/Proyecto/include/funciones.h:
-
-/home/user/Desktop/Proyecto/include/funciones2.h:
-
-/home/user/Desktop/Proyecto/include/juego.h:

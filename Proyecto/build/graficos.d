@@ -48,7 +48,8 @@ graficos.o: /home/user/Desktop/Proyecto/source/graficos.c \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
   /home/user/Desktop/Proyecto/include/graficos.h \
-  /home/user/Desktop/Proyecto/include/sprites.h
+  /home/user/Desktop/Proyecto/include/sprites.h \
+  /home/user/Desktop/Proyecto/include/definiciones.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -149,3 +150,5 @@ graficos.o: /home/user/Desktop/Proyecto/source/graficos.c \
 /home/user/Desktop/Proyecto/include/graficos.h:
 
 /home/user/Desktop/Proyecto/include/sprites.h:
+
+/home/user/Desktop/Proyecto/include/definiciones.h:

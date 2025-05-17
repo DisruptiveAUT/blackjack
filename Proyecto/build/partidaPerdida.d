@@ -1,0 +1,1 @@
+partidaPerdida.o: partidaPerdida.s

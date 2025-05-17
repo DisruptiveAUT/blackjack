@@ -50,6 +50,7 @@ main.o: /home/user/Desktop/Proyecto/source/main.c \
   /home/user/Desktop/Proyecto/include/graficos.h \
   /home/user/Desktop/Proyecto/include/definiciones.h \
   /home/user/Desktop/Proyecto/include/sprites.h \
+  /home/user/Desktop/Proyecto/include/definiciones.h \
   /home/user/Desktop/Proyecto/include/juego.h
 
 /opt/devkitPro/libnds/include/nds.h:
@@ -153,5 +154,7 @@ main.o: /home/user/Desktop/Proyecto/source/main.c \
 /home/user/Desktop/Proyecto/include/definiciones.h:
 
 /home/user/Desktop/Proyecto/include/sprites.h:
+
+/home/user/Desktop/Proyecto/include/definiciones.h:
 
 /home/user/Desktop/Proyecto/include/juego.h:

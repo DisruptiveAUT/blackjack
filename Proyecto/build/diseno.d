@@ -1,0 +1,1 @@
+diseno.o: diseno.s

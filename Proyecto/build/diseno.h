@@ -1,9 +1,9 @@
 
-//{{BLOCK(PuertaAbierta)
+//{{BLOCK(diseno)
 
 //======================================================================
 //
-//	PuertaAbierta, 256x192@16, 
+//	diseno, 256x192@16, 
 //	Alphabit on.
 //	+ bitmap not compressed
 //	Total size: 98304 = 98304
@@ -14,12 +14,12 @@
 //
 //======================================================================
 
-#ifndef GRIT_PUERTAABIERTA_H
-#define GRIT_PUERTAABIERTA_H
+#ifndef GRIT_DISENO_H
+#define GRIT_DISENO_H
 
-#define PuertaAbiertaBitmapLen 98304
-extern const unsigned int PuertaAbiertaBitmap[24576];
+#define disenoBitmapLen 98304
+extern const unsigned int disenoBitmap[24576];
 
-#endif // GRIT_PUERTAABIERTA_H
+#endif // GRIT_DISENO_H
 
-//}}BLOCK(PuertaAbierta)
+//}}BLOCK(diseno)

@@ -1,0 +1,1 @@
+menuPausa.o: menuPausa.s

@@ -48,7 +48,9 @@ sprites.o: /home/user/Desktop/Proyecto/source/sprites.c \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
   /home/user/Desktop/Proyecto/include/sprites.h \
-  /home/user/Desktop/Proyecto/include/definiciones.h
+  /home/user/Desktop/Proyecto/include/definiciones.h \
+  /home/user/Desktop/Proyecto/include/definiciones.h \
+  /home/user/Desktop/Proyecto/include/cartas_funciones.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -149,3 +151,7 @@ sprites.o: /home/user/Desktop/Proyecto/source/sprites.c \
 /home/user/Desktop/Proyecto/include/sprites.h:
 
 /home/user/Desktop/Proyecto/include/definiciones.h:
+
+/home/user/Desktop/Proyecto/include/definiciones.h:
+
+/home/user/Desktop/Proyecto/include/cartas_funciones.h:

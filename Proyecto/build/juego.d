@@ -50,7 +50,12 @@ juego.o: /home/user/Desktop/Proyecto/source/juego.c \
   /home/user/Desktop/Proyecto/include/definiciones.h \
   /home/user/Desktop/Proyecto/include/perifericos.h \
   /home/user/Desktop/Proyecto/include/rutinasAtencion.h \
-  /home/user/Desktop/Proyecto/include/fondos.h
+  /home/user/Desktop/Proyecto/include/juego.h \
+  /home/user/Desktop/Proyecto/include/fondos.h \
+  /home/user/Desktop/Proyecto/include/sprites.h \
+  /home/user/Desktop/Proyecto/include/definiciones.h \
+  /home/user/Desktop/Proyecto/include/funciones.h \
+  /home/user/Desktop/Proyecto/include/funciones2.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -154,4 +159,14 @@ juego.o: /home/user/Desktop/Proyecto/source/juego.c \
 
 /home/user/Desktop/Proyecto/include/rutinasAtencion.h:
 
+/home/user/Desktop/Proyecto/include/juego.h:
+
 /home/user/Desktop/Proyecto/include/fondos.h:
+
+/home/user/Desktop/Proyecto/include/sprites.h:
+
+/home/user/Desktop/Proyecto/include/definiciones.h:
+
+/home/user/Desktop/Proyecto/include/funciones.h:
+
+/home/user/Desktop/Proyecto/include/funciones2.h:
